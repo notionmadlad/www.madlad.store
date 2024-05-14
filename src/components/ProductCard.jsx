@@ -7,14 +7,14 @@ import { motion } from "framer-motion";
 export default function ProductCard({ delay, product }) {
   return (
     <Link href={`/gumroad/${product.gumroad}`}>
-      <motion.div 
+      <motion.div
         initial="hidden"
         whileInView="enter"
         exit="exit"
         variants={{
           hidden: { opacity: 0, x: 0, y: 50 },
           enter: { opacity: 1, x: 0, y: 0 },
-          exit: { opacity: 0, x: 0, y: -50 }
+          exit: { opacity: 0, x: 0, y: -50 },
         }}
         viewport={{ once: true }}
         transition={{ type: "linear", duration: 0.7, delay }}
@@ -36,9 +36,7 @@ export default function ProductCard({ delay, product }) {
               {product.price}
             </p>
           </div>
-          <p className="text-main-200">
-            {product.content}
-          </p>
+          <p className="text-main-200">{product.content}</p>
         </div>
       </motion.div>
     </Link>

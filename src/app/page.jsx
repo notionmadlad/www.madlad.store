@@ -112,7 +112,7 @@ export default function Home() {
                       product={products[key]}
                       key={index}
                     />
-                  )
+                  ),
               )}
             </div>
           </div>
@@ -144,7 +144,7 @@ export default function Home() {
                       product={products[key]}
                       key={index}
                     />
-                  )
+                  ),
               )}
             </div>
           </div>

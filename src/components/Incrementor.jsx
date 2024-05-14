@@ -19,4 +19,4 @@ export default function Incrementor({ number, add, interval }) {
   }, [add, currentNumber, interval, number]);
 
   return <>{currentNumber}</>;
-};
+}

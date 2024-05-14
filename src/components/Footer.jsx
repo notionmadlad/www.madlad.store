@@ -12,12 +12,13 @@ export default function Footer() {
           <div className="flex gap-10 mx-10 flex-col">
             <div>
               <div className="flex flex-col gap-6">
-              <h1 className="font-semibold text-[26px] xl:text-[30px]">
-                  <UserRoundPlus className="inline-flex size-[26px] md:size-[30px] mb-1 md:mb-2" /> Join my Newsletter
+                <h1 className="font-semibold text-[26px] xl:text-[30px]">
+                  <UserRoundPlus className="inline-flex size-[26px] md:size-[30px] mb-1 md:mb-2" />{" "}
+                  Join my Newsletter
                 </h1>
                 <p className="font-medium text-[18px] md:text-[20px] text-main-200 max-w-3xl">
-                  A place where you would have access to powerful
-                  Notion templates, resources and much more.
+                  A place where you would have access to powerful Notion
+                  templates, resources and much more.
                 </p>
               </div>
             </div>
@@ -45,7 +46,8 @@ export default function Footer() {
                 Boost Your Productivity with The Notion Madness
               </p>
               <p className="text-main-200 mt-5">
-                Discover the best Notion Templates to help you stay organized and productive.
+                Discover the best Notion Templates to help you stay organized
+                and productive.
               </p>
             </div>
             <div className="flex-1 justify-between flex flex-wrap gap-10 *:flex *:flex-col *:gap-2">
@@ -53,14 +55,21 @@ export default function Footer() {
                 <div key={index}>
                   <h4 className="font-medium text-[18px] mb-2">{key}</h4>
                   {Object.keys(footerLinks[key]).map((_key, index) => (
-                    <Link href={footerLinks[key][_key]} className="text-main-200" key={index}>{_key}</Link>
+                    <Link
+                      href={footerLinks[key][_key]}
+                      className="text-main-200"
+                      key={index}
+                    >
+                      {_key}
+                    </Link>
                   ))}
                 </div>
               ))}
             </div>
           </div>
           <div className="mx-10 border-t border-main-600 pt-5 mt-5 pb-12 text-[18px] font-semibold">
-            ©️ Coding Madlad 2023 - {(new Date()).getFullYear()}. All right reserved.
+            ©️ Coding Madlad 2023 - {new Date().getFullYear()}. All right
+            reserved.
           </div>
         </div>
       </footer>

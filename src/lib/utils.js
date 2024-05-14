@@ -20,7 +20,7 @@ export function generateURL(string) {
 }
 
 export function wait(timeout) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(resolve, timeout);
   });
 }

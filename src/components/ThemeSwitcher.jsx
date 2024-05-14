@@ -9,7 +9,11 @@ export default function ThemeSwitcher({ mobile }) {
   const { theme, toggleTheme } = useThemeSwitcher();
 
   useLayoutEffect(() => {
-    setDefaultTheme(window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    setDefaultTheme(
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light",
+    );
   }, []);
 
   const defaultIcon = mobile ? Smartphone : Laptop;
@@ -18,12 +22,16 @@ export default function ThemeSwitcher({ mobile }) {
   const Icon = theme === defaultTheme ? defaultIcon : themeIcon;
 
   return !mobile ? (
-    <div onClick={toggleTheme} className="cursor-pointer p-2 bg-main-800 rounded-[5px]">
+    <div
+      onClick={toggleTheme}
+      className="cursor-pointer p-2 bg-main-800 rounded-[5px]"
+    >
       <Icon />
     </div>
   ) : (
     <div onClick={toggleTheme} className="cursor-pointer">
-      {themeTitle} <Icon className="inline-flex p-1 bg-main-800 rounded-[5px]" />
+      {themeTitle}{" "}
+      <Icon className="inline-flex p-1 bg-main-800 rounded-[5px]" />
     </div>
   );
 }

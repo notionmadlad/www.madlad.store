@@ -2,10 +2,10 @@
 module.exports = {
   darkMode: "class",
   content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
+    "./app/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
   ],
   prefix: "",
   theme: {
@@ -19,16 +19,16 @@ module.exports = {
     extend: {
       colors: {
         main: {
-          "900": "var(--main-900)",
-          "800": "var(--main-800)",
-          "700": "var(--main-700)",
-          "600": "var(--main-600)",
-          "500": "var(--main-400)",
-          "400": "var(--main-400)",
-          "300": "var(--main-300)",
-          "200": "var(--main-200)",
-          "100": "var(--main-100)",
-          "50": "var(--main-50)"
+          900: "var(--main-900)",
+          800: "var(--main-800)",
+          700: "var(--main-700)",
+          600: "var(--main-600)",
+          500: "var(--main-400)",
+          400: "var(--main-400)",
+          300: "var(--main-300)",
+          200: "var(--main-200)",
+          100: "var(--main-100)",
+          50: "var(--main-50)",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -86,4 +86,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

@@ -14,7 +14,7 @@ export default function Lazy({ children, fallback }) {
       {
         root: null,
         rootMargin: "0px",
-        threshold: 0
+        threshold: 0,
       },
     );
 
@@ -32,4 +32,4 @@ export default function Lazy({ children, fallback }) {
   }, []);
 
   return <div ref={ref}>{isVisible ? children : fallback || null}</div>;
-};
+}

@@ -20,22 +20,22 @@ export default function PageTransition({ children }) {
   const key = usePathname();
 
   return (
-      <AnimatePresence mode="popLayout">
-        <motion.div
-          key={key}
-          initial="hidden"
-          animate="enter"
-          exit="exit"
-          variants={{
-            hidden: { opacity: 0, x: 0, y: -100 },
-            enter: { opacity: 1, x: 0, y: 0 },
-            exit: { opacity: 0, x: 0, y: 100 }
-          }}
-          transition={{ type: "linear", duration: 0.7 }}
-          className="overflow-hidden"
-        >
-          <FrozenRouter>{children}</FrozenRouter>
-        </motion.div>
-      </AnimatePresence>
+    <AnimatePresence mode="popLayout">
+      <motion.div
+        key={key}
+        initial="hidden"
+        animate="enter"
+        exit="exit"
+        variants={{
+          hidden: { opacity: 0, x: 0, y: -100 },
+          enter: { opacity: 1, x: 0, y: 0 },
+          exit: { opacity: 0, x: 0, y: 100 },
+        }}
+        transition={{ type: "linear", duration: 0.7 }}
+        className="overflow-hidden"
+      >
+        <FrozenRouter>{children}</FrozenRouter>
+      </motion.div>
+    </AnimatePresence>
   );
-};
+}

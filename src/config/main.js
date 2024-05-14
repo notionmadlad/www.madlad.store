@@ -104,15 +104,15 @@ export const products = {
     price: "Free",
     image: "/madlad-logo.png",
     showcase: ["new", "popular", "bundles"],
-    gumroad: "ecommerce"
-  }
+    gumroad: "ecommerce",
+  },
 };
 
 export const footerLinks = {
   Information: {
     "Terms of Service": generateURL("local:tos"),
     "Privacy Policy": generateURL("local:privacy"),
-    FAQs: generateURL("local:faqs")
+    FAQs: generateURL("local:faqs"),
   },
   Socials: {
     "Twitter (X)": generateURL("twitter"),
@@ -121,6 +121,6 @@ export const footerLinks = {
   },
   Store: {
     Gumroad: generateURL("gumroad"),
-    Affiliates: generateURL("affiliates")
-  }
+    Affiliates: generateURL("affiliates"),
+  },
 };

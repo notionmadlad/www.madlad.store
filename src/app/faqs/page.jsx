@@ -20,16 +20,15 @@ export default function Home() {
           <div className="flex gap-10 mx-10 flex-col">
             <div className="flex-1">
               <div className="flex flex-col gap-6">
-              <div className="flex flex-col gap-6">
-                <h1 className="font-semibold text-[40px] md:text-[60px] text-center">
-                <MailQuestion
-                    className="inline-flex size-[30px] md:size-[50px] mb-1 md:mb-2" 
-                /> Frequently Asked Question
-                </h1>
-                <p className="font-medium text-[18px] md:text-[20px] text-main-100 text-center">
-                  Find the answers of common questions below.
-                </p>
-              </div>
+                <div className="flex flex-col gap-6">
+                  <h1 className="font-semibold text-[40px] md:text-[60px] text-center">
+                    <MailQuestion className="inline-flex size-[30px] md:size-[50px] mb-1 md:mb-2" />{" "}
+                    Frequently Asked Question
+                  </h1>
+                  <p className="font-medium text-[18px] md:text-[20px] text-main-100 text-center">
+                    Find the answers of common questions below.
+                  </p>
+                </div>
               </div>
             </div>
             <Accordion

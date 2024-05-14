@@ -11,17 +11,19 @@ export function useSearchFilter(obj) {
 
   useEffect(() => {
     const url = new URL(window.location.href);
-    
+
     if (query) {
       url.searchParams.set("search", query);
 
-      setFiltered(prev => {
+      setFiltered((prev) => {
         const newObj = {};
         const keys = Object.keys(prev);
-        keys.forEach(key => {
+        keys.forEach((key) => {
           const item = obj[key];
 
-          if (JSON.stringify(item).toLowerCase().includes(query.toLowerCase())) {
+          if (
+            JSON.stringify(item).toLowerCase().includes(query.toLowerCase())
+          ) {
             newObj[key] = item;
           }
         });
@@ -38,7 +40,7 @@ export function useSearchFilter(obj) {
 
   return {
     state: [query, setQuery],
-    result: filtered
+    result: filtered,
   };
 }
 
@@ -46,7 +48,10 @@ export function useThemeSwitcher() {
   const [theme, setTheme] = useState(null);
 
   useLayoutEffect(() => {
-    const defaultTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    const defaultTheme = window.matchMedia("(prefers-color-scheme: dark)")
+      .matches
+      ? "dark"
+      : "light";
     const storedTheme = localStorage.getItem("theme");
     setTheme(storedTheme ? storedTheme : defaultTheme);
   }, []);
@@ -65,7 +70,9 @@ export function useThemeSwitcher() {
 
   useEffect(() => {
     const updateTheme = () => {
-      const newTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      const newTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
       setTheme(newTheme);
     };
 
@@ -93,13 +100,13 @@ export function useThemeColors() {
 
   useLayoutEffect(() => {
     const handleStorageChange = () => {
-      setTheme(localStorage.getItem('theme'));
+      setTheme(localStorage.getItem("theme"));
     };
 
-    window.addEventListener('storage', handleStorageChange);
+    window.addEventListener("storage", handleStorageChange);
 
     return () => {
-      window.removeEventListener('storage', handleStorageChange);
+      window.removeEventListener("storage", handleStorageChange);
     };
   }, []);
 
@@ -113,7 +120,7 @@ export function useThemeColors() {
     300: "#545454",
     200: "#3d3d3d",
     100: "#333333",
-    50: "#000000"
+    50: "#000000",
   };
 
   const dark = {
@@ -126,7 +133,7 @@ export function useThemeColors() {
     300: "#707070",
     200: "#808080",
     100: "#909090",
-    50: "#ffffff"
+    50: "#ffffff",
   };
 
   return theme === "light" ? light : dark;
