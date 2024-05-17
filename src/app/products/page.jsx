@@ -27,7 +27,7 @@ export default function Products() {
   const [provider, filtered] = useSearchFilter(products);
 
   return (
-    <>
+    <Suspense>
       <section
         id="home"
         className="relative flex justify-center items-center pt-36"
@@ -48,16 +48,11 @@ export default function Products() {
               <div className="flex gap-6 mt-10 flex-col md:flex-row">
                 <label className="relative rounded-[10px] border border-main-600 group flex overflow-hidden w-full md:max-w-lg">
                   <Search className="absolute py-2 pl-5 h-14 w-11 left-0 group-focus-within:-left-11 group-focus-within:h-14 overflow-hidden transition-all duration-300" />
-                  <Suspense fallback={<input
-                      className="py-4 pl-16 group-focus-within:pl-9 pr-9 w-full bg-main-800 outline-none group-hover:bg-main-700 transition-all duration-300 placeholder:text-main-50"
-                      placeholder="Loading search..."
-                    />}>
-                    <input
-                      className="py-4 pl-16 group-focus-within:pl-9 pr-9 w-full bg-main-800 outline-none group-hover:bg-main-700 transition-all duration-300 placeholder:text-main-50"
-                      placeholder="Search for templates..."
-                      {...provider}
-                    />
-                  </Suspense>
+                  <input
+                    className="py-4 pl-16 group-focus-within:pl-9 pr-9 w-full bg-main-800 outline-none group-hover:bg-main-700 transition-all duration-300 placeholder:text-main-50"
+                    placeholder="Search for templates..."
+                    {...provider}
+                  />
                 </label>
               </div>
             </div>
@@ -355,6 +350,6 @@ export default function Products() {
           </div>
         </div>
       </section>
-    </>
+    </Suspense>
   );
 }
