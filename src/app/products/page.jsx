@@ -23,11 +23,11 @@ import { useSearchFilter } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import { Suspense } from "react";
 
-export default function Products() {
+function Page() {
   const [provider, filtered] = useSearchFilter(products);
 
   return (
-    <Suspense>
+    <>
       <section
         id="home"
         className="relative flex justify-center items-center pt-36"
@@ -350,6 +350,14 @@ export default function Products() {
           </div>
         </div>
       </section>
+    </>
+  );
+}
+
+export default function Products() {
+  return (
+    <Suspense>
+      <Page />
     </Suspense>
   );
 }
