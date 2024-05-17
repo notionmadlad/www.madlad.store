@@ -9,7 +9,7 @@ import {
 import { faqs } from "@/config/main";
 import { MailQuestion } from "lucide-react";
 
-export default function Home() {
+export default function Faqs() {
   return (
     <>
       <section

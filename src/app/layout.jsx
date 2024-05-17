@@ -1,9 +1,4 @@
-import {
-  Jacquard_12_Charted,
-  JetBrains_Mono,
-  Poppins,
-  Space_Mono,
-} from "next/font/google";
+import { Poppins } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -12,11 +7,6 @@ import Script from "next/script";
 import { Toaster } from "@/components/ui/toaster";
 
 const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["500", "600"],
-});
-
-const mono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["500", "600"],
 });
@@ -55,7 +45,7 @@ export const metadata = {
 export default function RootLayout({ children, modal }) {
   return (
     <html lang="en">
-      <body className={mono.className}>
+      <body className={poppins.className}>
         <Navbar />
         {children}
         {modal}

@@ -186,16 +186,16 @@ div:has(> .sj-powered-by) {
 
 @layer base {
   .light:root {
-    --main-900: #ffffff;
-    --main-800: #f2f2f2;
-    --main-700: #e5e5e5;
-    --main-600: #cccccc;
-    --main-400: #b3b3b3;
-    --main-400: #999999;
-    --main-300: #808080;
-    --main-200: #666666;
-    --main-100: #4d4d4d;
     --main-50: #000000;
+    --main-100: #4d4d4d;
+    --main-200: #666666;
+    --main-300: #808080;
+    --main-400: #999999;
+    --main-500: #b3b3b3;
+    --main-600: #cccccc;
+    --main-700: #e5e5e5;
+    --main-800: #f2f2f2;
+    --main-900: #ffffff;
 
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -229,16 +229,16 @@ div:has(> .sj-powered-by) {
   }
 
   .dark:root {
-    --main-900: #000000;
-    --main-800: #0d0d0d;
-    --main-700: #1a1a1a;
-    --main-600: #333333;
-    --main-400: #4d4d4d;
-    --main-400: #666666;
-    --main-300: #808080;
-    --main-200: #808080;
-    --main-100: #999999;
     --main-50: #ffffff;
+    --main-100: #b3b3b3;
+    --main-200: #999999;
+    --main-300: #808080;
+    --main-400: #666666;
+    --main-500: #4d4d4d;
+    --main-600: #333333;
+    --main-700: #1a1a1a;
+    --main-800: #0d0d0d;
+    --main-900: #000000;
 
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;

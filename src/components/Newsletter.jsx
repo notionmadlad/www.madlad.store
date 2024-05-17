@@ -67,29 +67,26 @@ export default function Newsletter() {
       data-format="inline"
       data-version="5"
       data-options={JSON.stringify(dataOptions)}
+      data-element="fields"
+      data-stacked="false"
+      className="w-full flex md:flex-row flex-col gap-5"
     >
-      <div
-        data-element="fields"
-        data-stacked="false"
-        className="w-full flex md:flex-row flex-col gap-5"
+      <label className="relative rounded-[10px] border border-main-600 group flex overflow-hidden w-full md:max-w-lg">
+        <AtSign className="absolute py-2 pl-5 h-14 w-11 left-0 group-focus-within:-left-11 group-focus-within:h-14 overflow-hidden transition-all duration-300" />
+        <input
+          type="email"
+          name="email_address"
+          required
+          className="py-4 pl-16 group-focus-within:pl-9 pr-9 w-full bg-main-800 outline-none group-hover:bg-main-700 transition-all duration-300 placeholder:text-main-50"
+          placeholder="Enter your email..."
+        />
+      </label>
+      <button
+        data-element="submit"
+        className="py-4 px-9 bg-main-50 hover:bg-main-50 transition-all duration-500 rounded-[10px] font-semibold text-main-900"
       >
-        <div className="relative rounded-[10px] border border-main-600 group flex overflow-hidden w-full md:max-w-lg">
-          <AtSign className="absolute py-2 pl-5 h-14 w-11 left-0 group-focus-within:-left-11 group-focus-within:h-14 overflow-hidden transition-all duration-300" />
-          <input
-            type="email"
-            name="email_address"
-            required
-            className="py-4 pl-16 group-focus-within:pl-9 pr-9 w-full bg-main-800 outline-none group-hover:bg-main-700 transition-all duration-300 placeholder:text-main-50"
-            placeholder="Enter your email..."
-          />
-        </div>
-        <button
-          data-element="submit"
-          className="py-4 px-9 bg-main-50 hover:bg-main-50 transition-all duration-500 rounded-[10px] font-semibold text-main-900"
-        >
-          Sign Up
-        </button>
-      </div>
+        Sign Up
+      </button>
     </form>
   );
 }

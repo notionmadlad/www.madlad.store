@@ -6,7 +6,7 @@ export function Input({
   wrapperProps: { className: WrapperClassName, ...wrapperProps } = {},
 }) {
   return (
-    <div
+    <label
       className={cn(
         "relative rounded-[10px] border border-main-600 group flex overflow-hidden w-full",
         WrapperClassName,
@@ -21,7 +21,7 @@ export function Input({
         )}
         {...inputProps}
       />
-    </div>
+    </label>
   );
 }
 export function Datalist({
@@ -31,7 +31,7 @@ export function Datalist({
   children,
 }) {
   return (
-    <div
+    <label
       className={cn(
         "md:col-span-2 xl:col-span-1 relative rounded-[10px] border border-main-600 group flex overflow-hidden w-full",
         WrapperClassName,
@@ -48,7 +48,7 @@ export function Datalist({
         {...inputProps}
       />
       <datalist id={inputId}>{children}</datalist>
-    </div>
+    </label>
   );
 }
 
@@ -58,7 +58,7 @@ export function Textarea({
   wrapperProps: { className: WrapperClassName, ...wrapperProps } = {},
 }) {
   return (
-    <div
+    <label
       className={cn(
         "md:col-span-2 xl:col-span-3 relative rounded-[10px] border border-main-600 group flex overflow-hidden w-full",
         WrapperClassName,
@@ -73,6 +73,6 @@ export function Textarea({
         )}
         {...inputProps}
       />
-    </div>
+    </label>
   );
 }

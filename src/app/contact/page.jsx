@@ -5,7 +5,7 @@ import { Datalist, Input, Textarea } from "@/components/FormInputs";
 import { useFormData } from "@/lib/hooks";
 import { useToast } from "@/components/ui/use-toast";
 
-export default function Home() {
+export default function Contact() {
   const { toast } = useToast();
 
   const handleSubmit = async (formData) => {

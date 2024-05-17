@@ -38,10 +38,12 @@ export function useSearchFilter(obj) {
     router.push(url.href.replace(window.location.origin, ""));
   }, [obj, query, router]);
 
-  return {
-    state: [query, setQuery],
-    result: filtered,
+  const provider = {
+    value: query,
+    onChange: (e) => setQuery(e.target.value)
   };
+
+  return [provider, result];
 }
 
 export function useThemeSwitcher() {
@@ -111,29 +113,29 @@ export function useThemeColors() {
   }, []);
 
   const light = {
-    900: "#ffffff",
-    800: "#fafafa",
-    700: "#e6e6e6",
-    600: "#e6e6e6",
-    500: "#e3e3e3",
-    400: "#888888",
-    300: "#545454",
-    200: "#3d3d3d",
-    100: "#333333",
-    50: "#000000",
+    50: '#000000',
+    100: '#4d4d4d',
+    200: '#666666',
+    300: '#808080',
+    400: '#999999',
+    500: '#b3b3b3',
+    600: '#cccccc',
+    700: '#e5e5e5',
+    800: '#f2f2f2',
+    900: '#ffffff',
   };
 
   const dark = {
-    900: "#101010",
-    800: "#202020",
-    700: "#303030",
-    600: "#404040",
-    500: "#505050",
-    400: "#606060",
-    300: "#707070",
-    200: "#808080",
-    100: "#909090",
-    50: "#ffffff",
+    50: '#ffffff',
+    100: '#b3b3b3',
+    200: '#999999',
+    300: '#808080',
+    400: '#666666',
+    500: '#4d4d4d',
+    600: '#333333',
+    700: '#1a1a1a',
+    800: '#0d0d0d',
+    900: '#000000',
   };
 
   return theme === "light" ? light : dark;
