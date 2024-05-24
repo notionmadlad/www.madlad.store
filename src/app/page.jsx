@@ -13,8 +13,11 @@ import { BadgeCheck, Boxes, Laptop, ChevronsRight } from "lucide-react";
 import { faqs, products, stats } from "@/config/main";
 import ProductCard from "@/components/ProductCard";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Home() {
+  const { toast } = useToast();
+
   return (
     <>
       <section
@@ -36,21 +39,25 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex gap-6 mt-10 flex-col md:flex-row">
-                <button className="py-4 px-9 bg-main-50 hover:bg-main-50 transition-all duration-500 rounded-[10px] font-semibold text-main-900">
-                  Explore Templates
-                </button>
-                <button className="md:flex py-2 pl-9 pr-2 bg-main-800 hover:bg-main-700 transition-all duration-500 rounded-[10px] font-semibold border border-main-600 hidden justify-center group">
-                  <div className="py-2 mr-7">Get Full Bundle</div>
-                  <div className="py-2 right-2 px-3 bg-red-600 dark:bg-red-700 dark:group-hover:bg-red-800 group-hover:bg-red-700 transition-all duration-500 border-main-600 rounded-[5px]">
-                    50% Off
-                  </div>
-                </button>
-                <button className="md:hidden bg-main-800 hover:bg-main-700 border border-main-700 transition-all duration-500 rounded-[10px] font-semibold group">
-                  <div className="px-9 pt-4 pb-2">Get Full Bundle</div>
-                  <div className="mb-2 mx-2 py-2 bg-red-600 dark:bg-red-700 dark:group-hover:bg-red-800 group-hover:bg-red-700 transition-all duration-500 rounded-[5px]">
-                    50% Off
-                  </div>
-                </button>
+                <Link href="/products">
+                  <button className="py-4 px-9 bg-main-50 hover:bg-main-50 transition-all duration-500 rounded-[10px] font-semibold text-main-900">
+                    Explore Templates
+                  </button>
+                </Link>
+                <Link href="/gumroad/basic-bundle">
+                  <button className="md:flex py-2 pl-9 pr-2 bg-main-800 hover:bg-main-700 transition-all duration-500 rounded-[10px] font-semibold border border-main-600 hidden justify-center group">
+                    <div className="py-2 mr-7">Get Full Bundle</div>
+                    <div className="py-2 right-2 px-3 bg-red-600 dark:bg-red-700 dark:group-hover:bg-red-800 group-hover:bg-red-700 transition-all duration-500 border-main-600 rounded-[5px]">
+                      50% Off
+                    </div>
+                  </button>
+                  <button className="md:hidden bg-main-800 hover:bg-main-700 border border-main-700 transition-all duration-500 rounded-[10px] font-semibold group">
+                    <div className="px-9 pt-4 pb-2">Get Full Bundle</div>
+                    <div className="mb-2 mx-2 py-2 bg-red-600 dark:bg-red-700 dark:group-hover:bg-red-800 group-hover:bg-red-700 transition-all duration-500 rounded-[5px]">
+                      50% Off
+                    </div>
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="flex-[2] flex justify-center lg:justify-end items-center">
@@ -98,9 +105,11 @@ export default function Home() {
                   <BadgeCheck className="inline-flex size-[30px] md:size-[32px] mb-1 md:mb-2" />{" "}
                   Most Popular
                 </h1>
-                <button className="py-2 px-4 bg-main-800 hover:bg-main-700 transition-all duration-500 rounded-[10px] font-semibold border border-main-600 group">
-                  Explore
-                </button>
+                <Link href="/products">
+                  <button className="py-2 px-4 bg-main-800 hover:bg-main-700 transition-all duration-500 rounded-[10px] font-semibold border border-main-600 group">
+                    Explore
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="grid gap-10 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
@@ -130,9 +139,11 @@ export default function Home() {
                   <Boxes className="inline-flex size-[30px] md:size-[32px] mb-1 md:mb-2" />{" "}
                   Template Bundles
                 </h1>
-                <button className="py-2 px-4 bg-main-800 hover:bg-main-700 transition-all duration-500 rounded-[10px] font-semibold border border-main-600 group">
-                  Explore
-                </button>
+                <Link href="/products">
+                  <button className="py-2 px-4 bg-main-800 hover:bg-main-700 transition-all duration-500 rounded-[10px] font-semibold border border-main-600 group">
+                    Explore
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="grid gap-10 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
@@ -349,9 +360,11 @@ export default function Home() {
                 </p>
               </div>
               <div className="mx-auto mt-10 flex flex-col gap-6 max-w-2xl">
-                <button className="py-4 px-9 bg-main-800 hover:bg-main-700 transition-all duration-500 rounded-[10px] font-semibold border border-main-600 md:text-[30px]">
-                  Explore Templates
-                </button>
+                <Link href="/products">
+                  <button className="py-4 px-9 bg-main-800 hover:bg-main-700 transition-all duration-500 rounded-[10px] font-semibold border border-main-600 md:text-[30px]">
+                    Explore Templates
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

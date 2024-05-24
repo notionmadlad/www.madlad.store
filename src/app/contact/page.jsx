@@ -4,7 +4,6 @@ import { AtSign, Cog, List, Send, User } from "lucide-react";
 import { Datalist, Input, Textarea } from "@/components/FormInputs";
 import { useFormAction } from "@/lib/hooks";
 import { useToast } from "@/components/ui/use-toast";
-import { useEffect } from "react";
 
 
 export default function Contact() {
