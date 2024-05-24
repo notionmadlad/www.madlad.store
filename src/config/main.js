@@ -99,12 +99,44 @@ export const faqs = {
 
 export const products = {
   p1: {
-    title: "Template",
+    title: "Basic Madness Bundle",
     content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     price: "Free",
-    image: "/madlad-logo.png",
+    image: "/products/basic-bundle.png",
+    showcase: ["new", "popular", "bundles"],
+    gumroad: "basic-bundle",
+  },
+  p2: {
+    title: "ECommerce Madness",
+    content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+    price: "Free",
+    image: "/products/ecommerce.png",
     showcase: ["new", "popular", "bundles"],
     gumroad: "ecommerce",
+  },
+  p3: {
+    title: "Project Madness",
+    content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+    price: "Free",
+    image: "/products/project.png",
+    showcase: ["new", "popular", "bundles"],
+    gumroad: "project",
+  },
+  p4: {
+    title: "Social Media Madness",
+    content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+    price: "Free",
+    image: "/products/social-media.png",
+    showcase: ["new", "popular", "bundles"],
+    gumroad: "social-media",
+  },
+  p5: {
+    title: "Solopreneur Madness",
+    content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+    price: "Free",
+    image: "/products/solopreneur.png",
+    showcase: ["new", "popular", "bundles"],
+    gumroad: "solopreneur",
   },
 };
 

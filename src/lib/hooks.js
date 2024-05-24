@@ -43,7 +43,7 @@ export function useSearchFilter(obj) {
     onChange: (e) => setQuery(e.target.value)
   };
 
-  return [provider, result];
+  return [provider, filtered];
 }
 
 export function useThemeSwitcher() {
@@ -141,7 +141,7 @@ export function useThemeColors() {
   return theme === "light" ? light : dark;
 }
 
-export function useFormData(handleSubmit) {
+export function useFormAction(handleSubmit) {
   const ref = useRef(null);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState(null);

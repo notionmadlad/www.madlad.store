@@ -2,22 +2,20 @@
 
 import { AtSign, Cog, List, Send, User } from "lucide-react";
 import { Datalist, Input, Textarea } from "@/components/FormInputs";
-import { useFormData } from "@/lib/hooks";
+import { useFormAction } from "@/lib/hooks";
 import { useToast } from "@/components/ui/use-toast";
+import { useEffect } from "react";
+
 
 export default function Contact() {
   const { toast } = useToast();
 
   const handleSubmit = async (formData) => {
+    function getData(...a){const o = {};a.map(i => o[i] = formData.get(i));return JSON.stringify(o);}
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
-        body: JSON.stringify({
-          name: formData.get("name"),
-          email: formData.get("email"),
-          reason: formData.get("reason"),
-          details: formData.get("details"),
-        }),
+        body: getData("name", "email", "reason", "details"),
         headers: {
           "Content-type": "application/json",
         },
@@ -36,7 +34,7 @@ export default function Contact() {
     }
   };
 
-  const [formRef, state] = useFormData(handleSubmit);
+  const [formRef, state] = useFormAction(handleSubmit);
 
   return (
     <>
