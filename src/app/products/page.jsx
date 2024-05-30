@@ -21,9 +21,8 @@ import { faqs, products, stats } from "@/config/main";
 import ProductCard from "@/components/ProductCard";
 import { useSearchFilter } from "@/lib/hooks";
 import { motion } from "framer-motion";
-import { Suspense } from "react";
 
-function Page() {
+export default function Products() {
   const [provider, filtered] = useSearchFilter(products);
 
   return (
@@ -38,18 +37,18 @@ function Page() {
               <div className="flex flex-col gap-6">
                 <h1 className="font-semibold text-[40px] md:text-[60px]">
                   <Copy className="inline-flex size-[30px] md:size-[50px] mb-1 md:mb-2" />{" "}
-                  Notion <span className="text-main-300">Templates</span>
+                  Notion <span className="text-text-muted-foreground">Templates</span>
                 </h1>
-                <p className="font-medium text-[18px] md:text-[20px] text-main-200">
+                <p className="font-medium text-[18px] md:text-[20px] text-muted-foreground">
                   Find Notion templates to meet your needs for every area of
                   life.
                 </p>
               </div>
               <div className="flex gap-6 mt-10 flex-col md:flex-row">
-                <label className="relative rounded-[10px] border border-main-600 group flex overflow-hidden w-full md:max-w-lg">
+                <label className="relative rounded-lg border border-border group flex overflow-hidden w-full md:max-w-lg">
                   <Search className="absolute py-2 pl-5 h-14 w-11 left-0 group-focus-within:-left-11 group-focus-within:h-14 overflow-hidden transition-all duration-300" />
                   <input
-                    className="py-4 pl-16 group-focus-within:pl-9 pr-9 w-full bg-main-800 outline-none group-hover:bg-main-700 transition-all duration-300 placeholder:text-main-50"
+                    className="py-4 pl-16 group-focus-within:pl-9 pr-9 w-full bg-input outline-none transition-all duration-300 placeholder:text-foreground"
                     placeholder="Search for templates..."
                     {...provider}
                   />
@@ -157,7 +156,7 @@ function Page() {
                 <h1 className="font-semibold text-[35px] md:text-[42px] text-center">
                   Three Steps, Three Minutes
                 </h1>
-                <p className="font-medium text-[18px] md:text-[20px] text-main-200 text-center">
+                <p className="font-medium text-[18px] md:text-[20px] text-muted-foreground text-center">
                   Start using Notion without having to setup everything from
                   scratch.
                 </p>
@@ -175,22 +174,22 @@ function Page() {
                 }}
                 viewport={{ once: true }}
                 transition={{ type: "linear", duration: 0.7, delay: 0 }}
-                className="flex flex-col items-center mb-7 xl:mb-0 gap-5"
+                className="flex flex-col items-center mb-7 xl:mb-0 gap-5 group"
               >
-                <div className="w-max text-[150px] font-semibold text-main-200 hover:text-main-300 transition-all duration-500 cursor-pointer">
+                <div className="w-max text-[150px] font-semibold text-muted-foreground transition-all duration-500 cursor-pointer group-hover:-translate-y-4">
                   1
                 </div>
                 <h3 className="text-[18px] md:text-[20px] font-semibold">
                   Pick a template
                 </h3>
-                <h3 className="text-main-200 text-[14px] md:text-[16px] max-w-[280px] text-center">
+                <h3 className="text-muted-foreground text-[14px] md:text-[16px] max-w-[280px] text-center">
                   Browse for a template that fits your needs.
                 </h3>
               </motion.div>
               <div>
                 <ChevronsRight
                   className="xl:rotate-0 rotate-90 w-20 h-20"
-                  color="var(--main-400)"
+                  color="var(--foreground)"
                   width={64}
                   height={64}
                   alt="arrow"
@@ -207,15 +206,15 @@ function Page() {
                 }}
                 viewport={{ once: true }}
                 transition={{ type: "linear", duration: 0.7, delay: 0.2 }}
-                className="flex flex-col items-center mb-7 xl:mb-0 gap-5"
+                className="flex flex-col items-center mb-7 xl:mb-0 gap-5 group"
               >
-                <div className="w-max text-[150px] font-semibold text-main-200 hover:text-main-300 transition-all duration-500 cursor-pointer">
+                <div className="w-max text-[150px] font-semibold text-muted-foreground transition-all duration-500 cursor-pointer group-hover:-translate-y-4">
                   2
                 </div>
                 <h3 className="text-[18px] md:text-[20px] font-semibold">
                   Checkout securely
                 </h3>
-                <h3 className="text-main-200 text-[14px] md:text-[16px] max-w-[280px] text-center">
+                <h3 className="text-muted-foreground text-[14px] md:text-[16px] max-w-[280px] text-center">
                   Put your email to receive a receipt and complete your
                   purchase.
                 </h3>
@@ -223,7 +222,7 @@ function Page() {
               <div>
                 <ChevronsRight
                   className="xl:rotate-0 rotate-90 w-20 h-20"
-                  color="var(--main-400)"
+                  color="var(--foreground)"
                   width={64}
                   height={64}
                   alt="arrow"
@@ -240,15 +239,15 @@ function Page() {
                 }}
                 viewport={{ once: true }}
                 transition={{ type: "linear", duration: 0.7, delay: 0.4 }}
-                className="flex flex-col items-center mb-7 xl:mb-0 gap-5"
+                className="flex flex-col items-center mb-7 xl:mb-0 gap-5 group"
               >
-                <div className="w-max text-[150px] font-semibold text-main-200 hover:text-main-300 transition-all duration-500 cursor-pointer">
+                <div className="w-max text-[150px] font-semibold text-muted-foreground transition-all duration-500 cursor-pointer group-hover:-translate-y-4">
                   3
                 </div>
                 <h3 className="text-[18px] md:text-[20px] font-semibold">
                   Duplicate to Notion
                 </h3>
-                <h3 className="text-main-200 text-[14px] md:text-[16px] max-w-[280px] text-center">
+                <h3 className="text-muted-foreground text-[14px] md:text-[16px] max-w-[280px] text-center">
                   Open the link and duplicate it to your Notion account.
                 </h3>
               </motion.div>
@@ -308,7 +307,7 @@ function Page() {
                       +
                     </Lazy>
                   </div>
-                  <h3 className="text-main-200 text-[18px] md:text-[20px]">
+                  <h3 className="text-muted-foreground text-[18px] md:text-[20px]">
                     {key}
                   </h3>
                 </div>
@@ -351,13 +350,5 @@ function Page() {
         </div>
       </section>
     </>
-  );
-}
-
-export default function Products() {
-  return (
-    <Suspense>
-      <Page />
-    </Suspense>
   );
 }

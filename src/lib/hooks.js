@@ -36,7 +36,7 @@ export function useSearchFilter(obj) {
     }
 
     router.push(url.href.replace(window.location.origin, ""));
-  }, [obj, query, router]);
+  }, [obj, query, router, searchParams]);
 
   const provider = {
     value: query,

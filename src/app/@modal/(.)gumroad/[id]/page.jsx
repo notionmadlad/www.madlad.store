@@ -12,7 +12,7 @@ export default function ModalRoute({ params }) {
     <Modal>
       <div className="py-20 px-30 gumroad-iframe relative">
         <div
-          className="fixed top-3 right-7 p-2 bg-main-800 border border-main-600 rounded-[10px] cursor-pointer hover:bg-main-700"
+          className="fixed top-3 right-7 p-2 bg-background border border-border rounded-lg cursor-pointer hover:bg-secondary"
           onClick={router.back}
         >
           <X className="w-8 h-8" />

@@ -24,14 +24,14 @@ export default function ThemeSwitcher({ mobile }) {
   return !mobile ? (
     <div
       onClick={toggleTheme}
-      className="cursor-pointer p-2 bg-main-800 rounded-[5px]"
+      className="cursor-pointer p-2 bg-card rounded-md"
     >
       <Icon />
     </div>
   ) : (
     <div onClick={toggleTheme} className="cursor-pointer">
       {themeTitle}{" "}
-      <Icon className="inline-flex p-1 bg-main-800 rounded-[5px]" />
+      <Icon className="inline-flex p-1 bg-card rounded-md" />
     </div>
   );
 }

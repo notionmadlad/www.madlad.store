@@ -16,10 +16,10 @@ export default function Tos() {
                 </h1>
                 <br />
                 <div className="flex flex-col gap-8 statements">
-                  <p className="text-[16px] text-main-100">
+                  <p className="text-[16px] text-foreground">
                     Last Updated: 12th May, 2024
                   </p>
-                  <p className="text-[16px] text-main-100">
+                  <p className="text-[16px] text-foreground">
                     Welcome to The Madlad Store, a service provided by Coding
                     Madlad, an enterprise based in Tamil Nadu, India, owned by
                     Martin. These Terms of Service (&#34;Terms&#34;) govern your

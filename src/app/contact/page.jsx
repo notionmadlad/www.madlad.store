@@ -49,7 +49,7 @@ export default function Contact() {
                   <Send className="inline-flex size-[30px] md:size-[50px] mb-1 md:mb-2" />{" "}
                   Got Questions?
                 </h1>
-                <p className="font-medium text-[18px] md:text-[20px] text-main-100 text-center">
+                <p className="font-medium text-[18px] md:text-[20px] text-foreground text-center">
                   Drop me a message and I&#39;ll try to reach you ASAP.
                 </p>
               </div>
@@ -105,7 +105,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={state.pending}
-                className="disabled:bg-main-100 py-4 px-9 md:col-span-2 xl:col-span-3 bg-main-50 hover:bg-main-50 transition-all duration-500 rounded-[10px] font-semibold text-main-900"
+                className="disabled:bg-primary py-4 px-9 md:col-span-2 xl:col-span-3 bg-primary hover:bg-primary transition-all duration-500 rounded-lg font-semibold text-primary-foreground"
               >
                 Submit
               </button>

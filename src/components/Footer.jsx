@@ -1,8 +1,10 @@
 import { footerLinks } from "@/config/main";
 import Image from "next/image";
 import Link from "next/link";
-import Newsletter from "./Newsletter";
 import { UserRoundPlus } from "lucide-react";
+import dynamic from "next/dynamic";
+
+const Newsletter = dynamic(() => import("./Newsletter"), { ssr: false })
 
 export default function Footer() {
   return (
@@ -16,15 +18,13 @@ export default function Footer() {
                   <UserRoundPlus className="inline-flex size-[26px] md:size-[30px] mb-1 md:mb-2" />{" "}
                   Join my Newsletter
                 </h1>
-                <p className="font-medium text-[18px] md:text-[20px] text-main-200 max-w-3xl">
+                <p className="font-medium text-[18px] md:text-[20px] text-muted-foreground max-w-3xl">
                   A place where you would have access to powerful Notion
                   templates, resources and much more.
                 </p>
               </div>
             </div>
-            <div>
-              <Newsletter />
-            </div>
+            <Newsletter />
           </div>
         </div>
       </div>
@@ -38,14 +38,14 @@ export default function Footer() {
                   alt="logo"
                   width={125}
                   height={25}
-                  className="w-[50px] h-[50px] rounded-full border border-main-600"
+                  className="w-[50px] h-[50px] rounded-full border border-border"
                 />
                 <h1 className="font-semibold text-[20px]">The Madlad Store</h1>
               </div>
-              <p className="text-main-50 text-[20px] mt-5">
+              <p className="text-foreground text-[20px] mt-5">
                 Boost Your Productivity with The Notion Madness
               </p>
-              <p className="text-main-200 mt-5">
+              <p className="text-muted-foreground mt-5">
                 Discover the best Notion Templates to help you stay organized
                 and productive.
               </p>
@@ -57,7 +57,7 @@ export default function Footer() {
                   {Object.keys(footerLinks[key]).map((_key, index) => (
                     <Link
                       href={footerLinks[key][_key]}
-                      className="text-main-200"
+                      className="text-muted-foreground"
                       key={index}
                     >
                       {_key}
@@ -67,7 +67,7 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className="mx-10 border-t border-main-600 pt-5 mt-5 pb-12 text-[18px] font-semibold">
+          <div className="mx-10 border-t border-border pt-5 mt-5 pb-12 text-[18px] font-semibold">
             ©️ Coding Madlad 2023 - {new Date().getFullYear()}. All right
             reserved.
           </div>

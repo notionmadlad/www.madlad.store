@@ -8,7 +8,7 @@ export function Input({
   return (
     <label
       className={cn(
-        "relative rounded-[10px] border border-main-600 group flex overflow-hidden w-full",
+        "relative rounded-lg border border-border group flex overflow-hidden w-full",
         WrapperClassName,
       )}
       {...wrapperProps}
@@ -16,7 +16,7 @@ export function Input({
       <Icon className="absolute py-2 pl-5 h-14 w-11 left-0 group-focus-within:-left-11 group-focus-within:h-14 overflow-hidden transition-all duration-300" />
       <input
         className={cn(
-          "py-4 pl-16 group-focus-within:pl-9 pr-9 w-full bg-main-800 outline-none group-hover:bg-main-700 transition-all duration-300 placeholder:text-main-50",
+          "py-4 pl-16 group-focus-within:pl-9 pr-9 w-full bg-input outline-none group-hover:bg-secondary transition-all duration-300 placeholder:text-foreground",
           inputClassName,
         )}
         {...inputProps}
@@ -33,7 +33,7 @@ export function Datalist({
   return (
     <label
       className={cn(
-        "md:col-span-2 xl:col-span-1 relative rounded-[10px] border border-main-600 group flex overflow-hidden w-full",
+        "md:col-span-2 xl:col-span-1 relative rounded-lg border border-border group flex overflow-hidden w-full",
         WrapperClassName,
       )}
       {...wrapperProps}
@@ -41,7 +41,7 @@ export function Datalist({
       <Icon className="absolute py-2 pl-5 h-14 w-11 left-0 group-focus-within:-left-11 group-focus-within:h-14 overflow-hidden transition-all duration-300" />
       <input
         className={cn(
-          "py-4 pl-16 group-focus-within:pl-9 pr-5 w-full bg-main-800 outline-none group-hover:bg-main-700 transition-all duration-300 placeholder:text-main-50",
+          "py-4 pl-16 group-focus-within:pl-9 pr-5 w-full bg-input outline-none group-hover:bg-secondary transition-all duration-300 placeholder:text-foreground",
           inputClassName,
         )}
         list={inputId}
@@ -60,7 +60,7 @@ export function Textarea({
   return (
     <label
       className={cn(
-        "md:col-span-2 xl:col-span-3 relative rounded-[10px] border border-main-600 group flex overflow-hidden w-full",
+        "md:col-span-2 xl:col-span-3 relative rounded-lg border border-border group flex overflow-hidden w-full",
         WrapperClassName,
       )}
       {...wrapperProps}
@@ -68,7 +68,7 @@ export function Textarea({
       <Icon className="absolute py-2 pl-5 h-14 w-11 left-0 group-focus-within:-left-11 group-focus-within:h-14 overflow-hidden transition-all duration-300" />
       <textarea
         className={cn(
-          "py-4 pl-16 group-focus-within:pl-9 pr-9 w-full bg-main-800 outline-none group-hover:bg-main-700 transition-all duration-300 placeholder:text-main-50 min-h-14 h-28",
+          "py-4 pl-16 group-focus-within:pl-9 pr-9 w-full bg-input outline-none transition-all duration-300 placeholder:text-foreground min-h-14 h-28",
           inputClassName,
         )}
         {...inputProps}

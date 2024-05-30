@@ -1,10 +1,12 @@
 import { Poppins } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
-import "./globals.css";
 import Script from "next/script";
 import { Toaster } from "@/components/ui/toaster";
+import { Analytics } from "@vercel/analytics/react";
+
+import "@/styles/globals.css";
+import "@/styles/theme.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -51,10 +53,7 @@ export default function RootLayout({ children, modal }) {
         {modal}
         <Footer />
         <Toaster />
-        <Script
-          src="https://widget.senja.io/widget/fa4ed835-1c9d-49b4-af75-4c212ca3748e/platform.js"
-          async={true}
-        />
+        <Analytics />
       </body>
     </html>
   );

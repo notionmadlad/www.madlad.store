@@ -1,5 +1,3 @@
-"use client";
-
 import { AtSign } from "lucide-react";
 
 const dataOptions = {
@@ -71,19 +69,19 @@ export default function Newsletter() {
       data-stacked="false"
       className="w-full flex md:flex-row flex-col gap-5"
     >
-      <label className="relative rounded-[10px] border border-main-600 group flex overflow-hidden w-full md:max-w-lg">
+      <label className="relative rounded-lg border border-border group flex overflow-hidden w-full md:max-w-lg">
         <AtSign className="absolute py-2 pl-5 h-14 w-11 left-0 group-focus-within:-left-11 group-focus-within:h-14 overflow-hidden transition-all duration-300" />
         <input
           type="email"
           name="email_address"
           required
-          className="py-4 pl-16 group-focus-within:pl-9 pr-9 w-full bg-main-800 outline-none group-hover:bg-main-700 transition-all duration-300 placeholder:text-main-50"
+          className="py-4 pl-16 group-focus-within:pl-9 pr-9 w-full bg-input outline-none transition-all duration-300 placeholder:text-foreground"
           placeholder="Enter your email..."
         />
       </label>
       <button
         data-element="submit"
-        className="py-4 px-9 bg-main-50 hover:bg-main-50 transition-all duration-500 rounded-[10px] font-semibold text-main-900"
+        className="py-4 px-9 bg-primary transition-all duration-500 rounded-lg font-semibold text-primary-foreground"
       >
         Sign Up
       </button>

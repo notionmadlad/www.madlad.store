@@ -16,10 +16,10 @@ export default function Privacy() {
                 </h1>
                 <br />
                 <div className="flex flex-col gap-8 statements">
-                  <p className="text-[16px] text-main-100">
+                  <p className="text-[16px] text-foreground">
                     Last Updated: 12th May, 2024
                   </p>
-                  <p className="text-[16px] text-main-100">
+                  <p className="text-[16px] text-foreground">
                     Coding Madlad (&#34;we&#34; or &#34;us&#34;) operates the
                     website located at www.madlad.store (the &#34;Website&#34;)
                     and provides Notion templates and other services

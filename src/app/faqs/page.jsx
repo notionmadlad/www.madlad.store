@@ -25,7 +25,7 @@ export default function Faqs() {
                     <MailQuestion className="inline-flex size-[30px] md:size-[50px] mb-1 md:mb-2" />{" "}
                     Frequently Asked Question
                   </h1>
-                  <p className="font-medium text-[18px] md:text-[20px] text-main-100 text-center">
+                  <p className="font-medium text-[18px] md:text-[20px] text-foreground text-center">
                     Find the answers of common questions below.
                   </p>
                 </div>
