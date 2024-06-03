@@ -1,8 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind variants;
 
 @layer base {
+  .flip-y {
+    transform: rotateY(180deg);
+  }
+
+  .theme-transition {
+    transition: none 300ms !important;
+  }
+
+  .theme-transition * {
+    transition: none 300ms !important;
+  }
+
   * {
     scrollbar-color: var(--foreground) var(--background);
     @apply box-border scroll-smooth;
@@ -10,7 +23,7 @@
 
   html,
   body {
-    @apply m-0 h-full w-full bg-background p-0 text-foreground;
+    @apply m-0 h-full w-full overflow-x-hidden bg-background p-0 font-poppins text-foreground;
   }
 
   body:has(.modal-backdrop) {
@@ -21,16 +34,8 @@
     @apply pr-[15px];
   }
 
-  ::-webkit-scrollbar {
-    @apply bg-[aliceblue];
-  }
-
   .transition-all {
     @apply ease-curve;
-  }
-
-  .flip-y {
-    transform: rotateY(180deg);
   }
 
   .statements ul {
@@ -45,16 +50,12 @@
     @apply mt-5;
   }
 
-  .theme-transition {
-    @apply !transition-none !duration-300 *:!transition-none *:!duration-300;
-  }
-
   div:has(> .sj-powered-by) {
     @apply !hidden;
   }
 
   .sj-card {
-    @apply cursor-pointer !bg-card shadow-none transition-all duration-300 ease-curve *:!text-foreground hover:bg-secondary;
+    @apply cursor-pointer !bg-card shadow-none transition-all duration-500 ease-curve *:!text-foreground hover:bg-secondary;
   }
 
   .sj-text-card {

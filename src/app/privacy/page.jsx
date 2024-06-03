@@ -20,13 +20,13 @@ export default function Privacy() {
                     Last Updated: 12th May, 2024
                   </p>
                   <p className="text-[16px] text-foreground">
-                    Coding Madlad (&#34;we&#34; or &#34;us&#34;) operates the
-                    website located at www.madlad.store (the &#34;Website&#34;)
-                    and provides Notion templates and other services
-                    (collectively, the &#34;Service&#34;). This Privacy Policy
-                    (&#34;Policy&#34;) describes how we collect, use, and
-                    disclose information about you when you access or use the
-                    Service.
+                    Coding Madlad (&quot;we&quot; or &quot;us&quot;) operates
+                    the website located at www.madlad.store (the
+                    &quot;Website&quot;) and provides Notion templates and other
+                    services (collectively, the &quot;Service&quot;). This
+                    Privacy Policy (&quot;Policy&quot;) describes how we
+                    collect, use, and disclose information about you when you
+                    access or use the Service.
                   </p>
                   <ul>
                     <li>
@@ -142,7 +142,7 @@ export default function Privacy() {
                       </p>
                     </li>
                     <li>
-                      <p>Children&#39;s Privacy</p>
+                      <p>Children&apos;s Privacy</p>
                       <p>
                         The Service is not directed to children under the age of
                         13, and we do not knowingly collect personal information

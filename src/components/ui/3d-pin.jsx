@@ -41,7 +41,7 @@ export const PinContainer = ({
           style={{
             transform: transform,
           }}
-          className="absolute left-1/2 top-1/2 flex items-start justify-start overflow-hidden rounded-2xl border border-border bg-card p-4 transition duration-700"
+          className="absolute left-1/2 top-1/2 flex items-start justify-start overflow-hidden rounded-2xl border border-border bg-card p-4 transition duration-500"
         >
           <div className={cn("relative z-[5]", className)}>{children}</div>
         </div>
@@ -53,7 +53,7 @@ export const PinContainer = ({
 
 export const PinPerspective = ({ title, href }) => {
   return (
-    <motion.div className="pointer-events-none z-[60] flex h-80 w-96 items-center justify-center opacity-0 transition duration-500 group-hover/pin:opacity-100">
+    <motion.div className="pointer-events-none z-[60] flex h-80 w-96 items-center justify-center opacity-0 transition duration-700 group-hover/pin:opacity-100">
       <div className="inset-0 -mt-7 h-full w-full flex-none">
         <div className="absolute inset-x-0 top-0 flex justify-center">
           <a

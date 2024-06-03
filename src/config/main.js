@@ -26,7 +26,7 @@ export const faqs = {
       <span>
         Notion is an all-in-one workspace that allows you to take notes, add
         tasks, manage projects, and get organized. Notion has a versatile design
-        for getting things done, whether you&#39;re writing or planning.
+        for getting things done, whether you&apos;re writing or planning.
       </span>
     ),
   },
@@ -52,7 +52,7 @@ export const faqs = {
     ),
     content: (
       <span>
-        After purchase, you&#39;ll receive a link to duplicate the Notion
+        After purchase, you&apos;ll receive a link to duplicate the Notion
         template to your workspace.
       </span>
     ),
@@ -101,7 +101,7 @@ export const products = {
   p1: {
     title: "Basic Madness Bundle",
     content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-    price: "Free",
+    price: "FREE",
     image: "/products/basic-bundle.png",
     showcase: ["new", "popular", "bundles"],
     gumroad: "basic-bundle",
@@ -109,7 +109,7 @@ export const products = {
   p2: {
     title: "ECommerce Madness",
     content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-    price: "Free",
+    price: "FREE",
     image: "/products/ecommerce.png",
     showcase: ["new", "popular", "bundles"],
     gumroad: "ecommerce",
@@ -117,7 +117,7 @@ export const products = {
   p3: {
     title: "Project Madness",
     content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-    price: "Free",
+    price: "FREE",
     image: "/products/project.png",
     showcase: ["new", "popular", "bundles"],
     gumroad: "project",
@@ -125,7 +125,7 @@ export const products = {
   p4: {
     title: "Social Media Madness",
     content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-    price: "Free",
+    price: "FREE",
     image: "/products/social-media.png",
     showcase: ["new", "popular", "bundles"],
     gumroad: "social-media",
@@ -133,7 +133,7 @@ export const products = {
   p5: {
     title: "Solopreneur Madness",
     content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-    price: "Free",
+    price: "FREE",
     image: "/products/solopreneur.png",
     showcase: ["new", "popular", "bundles"],
     gumroad: "solopreneur",

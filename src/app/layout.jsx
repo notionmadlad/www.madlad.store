@@ -1,16 +1,23 @@
-import { Poppins } from "next/font/google";
+import { JetBrains_Mono, Poppins } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Script from "next/script";
-import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "@/components/ui/toast/toaster";
 import { Analytics } from "@vercel/analytics/react";
 
 import "@/styles/globals.css";
 import "@/styles/theme.css";
+import { cn } from "@/lib/utils";
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["500", "600"],
+  variable: "--font-poppins",
+});
+
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["500", "600"],
+  variable: "--font-mono",
 });
 
 /** @type {import('next').Metadata} */
@@ -47,7 +54,7 @@ export const metadata = {
 export default function RootLayout({ children, modal }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={cn(poppins.variable, mono.variable)}>
         <Navbar />
         {children}
         {modal}

@@ -14,9 +14,9 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed left-0 right-0 top-0 z-[10] flex h-20 items-center justify-center border-b border-border backdrop-blur">
+      <nav className="fixed left-0 right-0 top-0 z-[9999] flex h-20 items-center justify-center p-2">
         <div className="h-full w-full max-w-6xl">
-          <div className="mx-10 flex h-full items-center justify-between">
+          <div className="mx-10 flex h-full items-center justify-between rounded-full border border-border bg-background px-2 backdrop-blur-[6px]">
             <Link href="/" className="flex items-center gap-5">
               <Image
                 src="/madlad-logo.png"
@@ -33,8 +33,8 @@ export default function Navbar() {
                   <Link
                     href={navLinks[key]}
                     className={cn(
-                      "border-border hover:border-b",
-                      pathname === navLinks[key] && "border-b border-border",
+                      "border-y border-transparent hover:border-b-border",
+                      pathname === navLinks[key] && "border-y border-b-border",
                     )}
                     key={index}
                   >
@@ -45,7 +45,7 @@ export default function Navbar() {
               </div>
               <div
                 className={cn(
-                  "flex cursor-pointer flex-col gap-1.5 transition-all duration-700 *:h-[2px] *:rounded-full *:bg-foreground *:transition-all *:duration-700 md:hidden",
+                  "mr-4 flex cursor-pointer flex-col gap-1.5 transition-all duration-500 *:h-[2px] *:rounded-full *:bg-foreground *:transition-all *:duration-500 md:hidden",
                   open && "rotate-[360deg]",
                 )}
                 onClick={() => setOpen((prev) => !prev)}
@@ -67,8 +67,8 @@ export default function Navbar() {
       </nav>
       <div
         className={cn(
-          "fixed -top-[145px] left-0 right-0 z-[5] flex h-[225px] flex-col gap-3 border-b border-border bg-background p-5 font-semibold transition-all duration-500 ease-in-out *:text-[18px] md:hidden",
-          open && "top-20",
+          "fixed -top-[145px] left-12 right-12 z-[999] flex h-[225px] flex-col gap-3 rounded-lg border border-border bg-background p-5 font-semibold opacity-0 transition-all duration-500 ease-in-out *:text-[18px] md:hidden",
+          open && "top-20 opacity-100",
         )}
       >
         {Object.keys(navLinks).map((key, index) => (

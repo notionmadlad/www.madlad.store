@@ -70,12 +70,12 @@ export default function Newsletter() {
       className="flex w-full flex-col gap-5 md:flex-row"
     >
       <label className="group relative flex w-full overflow-hidden rounded-lg border border-border md:max-w-lg">
-        <AtSign className="absolute left-0 h-14 w-11 overflow-hidden py-2 pl-5 transition-all duration-300 group-focus-within:-left-11 group-focus-within:h-14" />
+        <AtSign className="absolute left-0 h-14 w-11 overflow-hidden py-2 pl-5 transition-all duration-500 group-focus-within:-left-11 group-focus-within:h-14" />
         <input
           type="email"
           name="email_address"
           required
-          className="w-full bg-input py-4 pl-16 pr-9 outline-none transition-all duration-300 placeholder:text-foreground group-focus-within:pl-9"
+          className="w-full bg-input py-4 pl-16 pr-9 outline-none transition-all duration-500 placeholder:text-foreground group-focus-within:pl-9"
           placeholder="Enter your email..."
         />
       </label>

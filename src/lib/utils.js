@@ -7,7 +7,7 @@ export function cn(...inputs) {
 }
 
 export function generateId(string) {
-  const hash = createHash("sha1");
+  const hash = createHash("sha256");
   hash.update(string);
   const digest = hash.digest("hex");
   const key = digest.slice(0, 4);

@@ -80,6 +80,10 @@ module.exports = {
       transitionTimingFunction: {
         curve: " cubic-bezier(0, 0, 0, 1)",
       },
+      fontFamily: {
+        mono: ["var(--font-mono)"],
+        poppins: ["var(--font-poppins)"],
+      },
     },
   },
   plugins: [require("tailwindcss-animate"), addVariablesForColors, svgPlugin],

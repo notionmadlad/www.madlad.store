@@ -41,24 +41,29 @@ export default function Home() {
                 </p>
               </div>
               <div className="mt-10 flex flex-col gap-6 md:flex-row">
-                <Link href="/products">
-                  <button className="hover:bg- rounded-lg bg-primary px-9 py-4 font-semibold text-primary-foreground transition-all duration-500">
-                    Explore Templates
-                  </button>
+                <Link
+                  href="/products"
+                  className="rounded-lg bg-primary px-9 py-4 text-center font-semibold text-primary-foreground transition-all duration-500"
+                >
+                  Explore Templates
                 </Link>
-                <Link href="/gumroad/basic-bundle">
-                  <button className="group hidden justify-center rounded-lg border border-border bg-card py-2 pl-9 pr-2 font-semibold transition-all duration-500 hover:bg-secondary md:flex">
-                    <div className="mr-7 py-2">Get Full Bundle</div>
-                    <div className="right-2 rounded-md border-border bg-red-600 px-3 py-2 transition-all duration-500 group-hover:bg-red-700 dark:bg-red-700 dark:group-hover:bg-red-800">
-                      FREE
-                    </div>
-                  </button>
-                  <button className="group rounded-lg border border-border bg-card font-semibold transition-all duration-500 hover:bg-secondary md:hidden">
-                    <div className="px-9 pb-2 pt-4">Get Full Bundle</div>
-                    <div className="mx-2 mb-2 rounded-md border-border bg-red-600 py-2 transition-all duration-500 group-hover:bg-red-700 dark:bg-red-700 dark:group-hover:bg-red-800">
-                      FREE
-                    </div>
-                  </button>
+                <Link
+                  href="/gumroad/basic-bundle"
+                  className="group hidden justify-center rounded-lg border border-border bg-card py-2 pl-9 pr-2 text-center font-semibold transition-all duration-500 hover:bg-secondary md:flex"
+                >
+                  <div className="mr-7 py-2">Get Full Bundle</div>
+                  <div className="right-2 rounded-md border-border bg-red-600 px-3 py-2 font-mono transition-all duration-500 group-hover:bg-red-700 dark:bg-red-700 dark:group-hover:bg-red-800">
+                    FREE
+                  </div>
+                </Link>
+                <Link
+                  href="/gumroad/basic-bundle"
+                  className="group rounded-lg border border-border bg-card text-center font-semibold transition-all duration-500 hover:bg-secondary md:hidden"
+                >
+                  <div className="px-9 pb-2 pt-4">Get Full Bundle</div>
+                  <div className="mx-2 mb-2 rounded-md border-border bg-red-600 py-2 font-mono transition-all duration-500 group-hover:bg-red-700 dark:bg-red-700 dark:group-hover:bg-red-800">
+                    FREE
+                  </div>
                 </Link>
               </div>
             </div>
@@ -74,7 +79,7 @@ export default function Home() {
                 }}
                 viewport={{ once: true }}
                 transition={{ type: "linear", duration: 0.7 }}
-                className="mt-[70px] h-[450px] w-[335px]"
+                className="mr-[18px] mt-[70px] h-[450px] w-[335px]"
               >
                 <PinContainer
                   title="The best Notion Templates await your arrival."
@@ -208,7 +213,7 @@ export default function Home() {
                 transition={{ type: "linear", duration: 0.7, delay: 0 }}
                 className="group mb-7 flex flex-col items-center gap-5 xl:mb-0"
               >
-                <div className="w-max cursor-pointer text-[150px] font-semibold text-muted-foreground transition-all duration-500 group-hover:-translate-y-4">
+                <div className="w-max cursor-pointer font-mono text-[150px] font-semibold text-muted-foreground transition-all duration-500 group-hover:-translate-y-4">
                   1
                 </div>
                 <h3 className="text-[18px] font-semibold md:text-[20px]">
@@ -240,7 +245,7 @@ export default function Home() {
                 transition={{ type: "linear", duration: 0.7, delay: 0.2 }}
                 className="group mb-7 flex flex-col items-center gap-5 xl:mb-0"
               >
-                <div className="w-max cursor-pointer text-[150px] font-semibold text-muted-foreground transition-all duration-500 group-hover:-translate-y-4">
+                <div className="w-max cursor-pointer font-mono text-[150px] font-semibold text-muted-foreground transition-all duration-500 group-hover:-translate-y-4">
                   2
                 </div>
                 <h3 className="text-[18px] font-semibold md:text-[20px]">
@@ -273,7 +278,7 @@ export default function Home() {
                 transition={{ type: "linear", duration: 0.7, delay: 0.4 }}
                 className="group mb-7 flex flex-col items-center gap-5 xl:mb-0"
               >
-                <div className="w-max cursor-pointer text-[150px] font-semibold text-muted-foreground transition-all duration-500 group-hover:-translate-y-4">
+                <div className="w-max cursor-pointer font-mono text-[150px] font-semibold text-muted-foreground transition-all duration-500 group-hover:-translate-y-4">
                   3
                 </div>
                 <h3 className="text-[18px] font-semibold md:text-[20px]">
@@ -306,7 +311,7 @@ export default function Home() {
             <div className="mx-10 flex flex-wrap items-center justify-center gap-10 md:flex-row md:gap-[15%]">
               {Object.keys(stats).map((key, index) => (
                 <div className="flex flex-col items-center" key={index}>
-                  <div className="w-max text-[30px] font-semibold md:text-[35px]">
+                  <div className="w-max text-[30px] font-semibold tabular-nums md:text-[35px]">
                     <Lazy fallback="0+">
                       <Incrementor
                         number={stats[key]}

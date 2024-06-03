@@ -22,12 +22,12 @@ export default function Tos() {
                   <p className="text-[16px] text-foreground">
                     Welcome to The Madlad Store, a service provided by Coding
                     Madlad, an enterprise based in Tamil Nadu, India, owned by
-                    Martin. These Terms of Service (&#34;Terms&#34;) govern your
-                    access to and use of our website located at www.madlad.store
-                    (the &#34;Website&#34;) and any services, templates, or
-                    other products provided by us (collectively, the
-                    &#34;Service&#34;). By accessing or using the Service, you
-                    agree to be bound by these Terms.
+                    Martin. These Terms of Service (&quot;Terms&quot;) govern
+                    your access to and use of our website located at
+                    www.madlad.store (the &quot;Website&quot;) and any services,
+                    templates, or other products provided by us (collectively,
+                    the &quot;Service&quot;). By accessing or using the Service,
+                    you agree to be bound by these Terms.
                   </p>
                   <ul>
                     <li>
@@ -119,10 +119,10 @@ export default function Tos() {
                         </li>
                         <li>
                           Feedback: If you provide any feedback, suggestions, or
-                          ideas regarding the Service (&#34;Feedback&#34;), you
-                          hereby grant us a perpetual, irrevocable, worldwide,
-                          royalty-free, and non-exclusive license to use,
-                          reproduce, modify, adapt, publish, translate,
+                          ideas regarding the Service (&quot;Feedback&quot;),
+                          you hereby grant us a perpetual, irrevocable,
+                          worldwide, royalty-free, and non-exclusive license to
+                          use, reproduce, modify, adapt, publish, translate,
                           distribute, and sublicense such Feedback for any
                           purpose.
                         </li>
@@ -131,9 +131,9 @@ export default function Tos() {
                     <li>
                       <p>Disclaimer of Warranties</p>
                       <p>
-                        THE SERVICE IS PROVIDED ON AN &#34;AS IS&#34; AND
-                        &#34;AS AVAILABLE&#34; BASIS, WITHOUT ANY WARRANTIES OF
-                        ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE FULLEST
+                        THE SERVICE IS PROVIDED ON AN &quot;AS IS&quot; AND
+                        &quot;AS AVAILABLE&quot; BASIS, WITHOUT ANY WARRANTIES
+                        OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE FULLEST
                         EXTENT PERMITTED BY APPLICABLE LAW, WE DISCLAIM ALL
                         WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT
                         LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY,

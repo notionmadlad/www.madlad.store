@@ -3,7 +3,7 @@
 import { AtSign, Cog, List, Send, User } from "lucide-react";
 import { Datalist, Input, Textarea } from "@/components/FormInputs";
 import { useFormAction } from "@/lib/hooks";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/components/ui/toast/use-toast";
 
 export default function Contact() {
   const { toast } = useToast();
@@ -53,7 +53,7 @@ export default function Contact() {
                   Got Questions?
                 </h1>
                 <p className="text-center text-[18px] font-medium text-foreground md:text-[20px]">
-                  Drop me a message and I&#39;ll try to reach you ASAP.
+                  Drop me a message and I&apos;ll try to reach you ASAP.
                 </p>
               </div>
             </div>

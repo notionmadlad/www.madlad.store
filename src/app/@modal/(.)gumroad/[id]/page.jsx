@@ -6,7 +6,7 @@ import { X } from "lucide-react";
 import Script from "next/script";
 import Link from "next/link";
 
-export default function ModalRoute({ params }) {
+export default function ModalParallel({ params }) {
   const router = useRouter();
   return (
     <Modal>

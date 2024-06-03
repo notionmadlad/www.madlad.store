@@ -13,10 +13,10 @@ export function Input({
       )}
       {...wrapperProps}
     >
-      <Icon className="absolute left-0 h-14 w-11 overflow-hidden py-2 pl-5 transition-all duration-300 group-focus-within:-left-11 group-focus-within:h-14" />
+      <Icon className="absolute left-0 h-14 w-11 overflow-hidden py-2 pl-5 transition-all duration-500 group-focus-within:-left-11 group-focus-within:h-14" />
       <input
         className={cn(
-          "w-full bg-input py-4 pl-16 pr-9 outline-none transition-all duration-300 placeholder:text-foreground group-focus-within:pl-9 group-hover:bg-secondary",
+          "w-full bg-input py-4 pl-16 pr-9 outline-none transition-all duration-500 placeholder:text-foreground group-focus-within:pl-9 group-hover:bg-secondary",
           inputClassName,
         )}
         {...inputProps}
@@ -38,10 +38,10 @@ export function Datalist({
       )}
       {...wrapperProps}
     >
-      <Icon className="absolute left-0 h-14 w-11 overflow-hidden py-2 pl-5 transition-all duration-300 group-focus-within:-left-11 group-focus-within:h-14" />
+      <Icon className="absolute left-0 h-14 w-11 overflow-hidden py-2 pl-5 transition-all duration-500 group-focus-within:-left-11 group-focus-within:h-14" />
       <input
         className={cn(
-          "w-full bg-input py-4 pl-16 pr-5 outline-none transition-all duration-300 placeholder:text-foreground group-focus-within:pl-9 group-hover:bg-secondary",
+          "w-full bg-input py-4 pl-16 pr-5 outline-none transition-all duration-500 placeholder:text-foreground group-focus-within:pl-9 group-hover:bg-secondary",
           inputClassName,
         )}
         list={inputId}
@@ -65,10 +65,10 @@ export function Textarea({
       )}
       {...wrapperProps}
     >
-      <Icon className="absolute left-0 h-14 w-11 overflow-hidden py-2 pl-5 transition-all duration-300 group-focus-within:-left-11 group-focus-within:h-14" />
+      <Icon className="absolute left-0 h-14 w-11 overflow-hidden py-2 pl-5 transition-all duration-500 group-focus-within:-left-11 group-focus-within:h-14" />
       <textarea
         className={cn(
-          "h-28 min-h-14 w-full bg-input py-4 pl-16 pr-9 outline-none transition-all duration-300 placeholder:text-foreground group-focus-within:pl-9",
+          "h-28 min-h-14 w-full bg-input py-4 pl-16 pr-9 outline-none transition-all duration-500 placeholder:text-foreground group-focus-within:pl-9",
           inputClassName,
         )}
         {...inputProps}
