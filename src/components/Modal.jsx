@@ -20,7 +20,7 @@ export function Modal({ children }) {
 
   return createPortal(
     <div className="modal-backdrop">
-      <div className="absolute top-0 bottom-0 left-0 right-0 overflow-y-scroll">
+      <div className="absolute bottom-0 left-0 right-0 top-0 overflow-y-scroll">
         {children}
       </div>
     </div>,

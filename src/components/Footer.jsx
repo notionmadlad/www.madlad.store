@@ -4,21 +4,21 @@ import Link from "next/link";
 import { UserRoundPlus } from "lucide-react";
 import dynamic from "next/dynamic";
 
-const Newsletter = dynamic(() => import("./Newsletter"), { ssr: false })
+const Newsletter = dynamic(() => import("./Newsletter"), { ssr: false });
 
 export default function Footer() {
   return (
     <>
-      <div className="relative flex justify-center items-center pt-24">
-        <div className="h-full max-w-6xl w-full">
-          <div className="flex gap-10 mx-10 flex-col">
+      <div className="relative flex items-center justify-center pt-24">
+        <div className="h-full w-full max-w-6xl">
+          <div className="mx-10 flex flex-col gap-10">
             <div>
               <div className="flex flex-col gap-6">
-                <h1 className="font-semibold text-[26px] xl:text-[30px]">
-                  <UserRoundPlus className="inline-flex size-[26px] md:size-[30px] mb-1 md:mb-2" />{" "}
+                <h1 className="text-[26px] font-semibold xl:text-[30px]">
+                  <UserRoundPlus className="mb-1 inline-flex size-[26px] md:mb-2 md:size-[30px]" />{" "}
                   Join my Newsletter
                 </h1>
-                <p className="font-medium text-[18px] md:text-[20px] text-muted-foreground max-w-3xl">
+                <p className="max-w-3xl text-[18px] font-medium text-muted-foreground md:text-[20px]">
                   A place where you would have access to powerful Notion
                   templates, resources and much more.
                 </p>
@@ -28,32 +28,32 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <footer className="relative flex justify-center items-center pt-24">
-        <div className="h-full max-w-6xl w-full">
-          <div className="flex flex-col md:flex-row flex-wrap gap-10 mx-10 justify-between">
-            <div className="flex-1 max-w-lg">
-              <div className="flex gap-5 items-center">
+      <footer className="relative flex items-center justify-center pt-24">
+        <div className="h-full w-full max-w-6xl">
+          <div className="mx-10 flex flex-col flex-wrap justify-between gap-10 md:flex-row">
+            <div className="max-w-lg flex-1">
+              <div className="flex items-center gap-5">
                 <Image
                   src="/madlad-logo.png"
                   alt="logo"
                   width={125}
                   height={25}
-                  className="w-[50px] h-[50px] rounded-full border border-border"
+                  className="h-[50px] w-[50px] rounded-full border border-border"
                 />
-                <h1 className="font-semibold text-[20px]">The Madlad Store</h1>
+                <h1 className="text-[20px] font-semibold">The Madlad Store</h1>
               </div>
-              <p className="text-foreground text-[20px] mt-5">
+              <p className="mt-5 text-[20px] text-foreground">
                 Boost Your Productivity with The Notion Madness
               </p>
-              <p className="text-muted-foreground mt-5">
+              <p className="mt-5 text-muted-foreground">
                 Discover the best Notion Templates to help you stay organized
                 and productive.
               </p>
             </div>
-            <div className="flex-1 justify-between flex flex-wrap gap-10 *:flex *:flex-col *:gap-2">
+            <div className="flex flex-1 flex-wrap justify-between gap-10 *:flex *:flex-col *:gap-2">
               {Object.keys(footerLinks).map((key, index) => (
                 <div key={index}>
-                  <h4 className="font-medium text-[18px] mb-2">{key}</h4>
+                  <h4 className="mb-2 text-[18px] font-medium">{key}</h4>
                   {Object.keys(footerLinks[key]).map((_key, index) => (
                     <Link
                       href={footerLinks[key][_key]}
@@ -67,7 +67,7 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className="mx-10 border-t border-border pt-5 mt-5 pb-12 text-[18px] font-semibold">
+          <div className="mx-10 mt-5 border-t border-border pb-12 pt-5 text-[18px] font-semibold">
             ©️ Coding Madlad 2023 - {new Date().getFullYear()}. All right
             reserved.
           </div>

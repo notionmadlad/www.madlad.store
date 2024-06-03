@@ -14,18 +14,18 @@ export default function Faqs() {
     <>
       <section
         id="faqs"
-        className="relative flex justify-center items-center pt-36"
+        className="relative flex items-center justify-center pt-36"
       >
-        <div className="h-full max-w-6xl w-full">
-          <div className="flex gap-10 mx-10 flex-col">
+        <div className="h-full w-full max-w-6xl">
+          <div className="mx-10 flex flex-col gap-10">
             <div className="flex-1">
               <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-6">
-                  <h1 className="font-semibold text-[40px] md:text-[60px] text-center">
-                    <MailQuestion className="inline-flex size-[30px] md:size-[50px] mb-1 md:mb-2" />{" "}
+                  <h1 className="text-center text-[40px] font-semibold md:text-[60px]">
+                    <MailQuestion className="mb-1 inline-flex size-[30px] md:mb-2 md:size-[50px]" />{" "}
                     Frequently Asked Question
                   </h1>
-                  <p className="font-medium text-[18px] md:text-[20px] text-foreground text-center">
+                  <p className="text-center text-[18px] font-medium text-foreground md:text-[20px]">
                     Find the answers of common questions below.
                   </p>
                 </div>
@@ -34,7 +34,7 @@ export default function Faqs() {
             <Accordion
               type="single"
               collapsible
-              className="relative flex justify-center items-center gap-5 flex-col w-full"
+              className="relative flex w-full flex-col items-center justify-center gap-5"
             >
               {Object.keys(faqs).map((key, index) => (
                 <AccordionItem delay={index * 0.2} value={key} key={index}>

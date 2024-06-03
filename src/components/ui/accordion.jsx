@@ -16,7 +16,7 @@ const AccordionItem = React.forwardRef(
       <MotionAccordionItem
         ref={ref}
         className={cn(
-          "border border-border bg-card hover:bg-secondary transition-all duration-500 rounded-lg text-[18px] w-full max-w-3xl",
+          "w-full max-w-3xl rounded-lg border border-border bg-card text-[18px] transition-all duration-500 hover:bg-secondary",
           className,
         )}
         {...props}
@@ -42,7 +42,7 @@ const AccordionTrigger = React.forwardRef(
       <AccordionPrimitive.Trigger
         ref={ref}
         className={cn(
-          "z-[1] p-5 flex flex-1 items-center justify-between duration-500 *:text-start transition-all text-[18px] md:text-[20px] font-semibold [&[data-state=open]>svg]:rotate-180",
+          "z-[1] flex flex-1 items-center justify-between p-5 text-[18px] font-semibold transition-all duration-500 *:text-start md:text-[20px] [&[data-state=open]>svg]:rotate-180",
           className,
         )}
         {...props}
@@ -59,7 +59,7 @@ const AccordionContent = React.forwardRef(
   ({ className, children, ...props }, ref) => (
     <AccordionPrimitive.Content
       ref={ref}
-      className="mx-5 mb-5 -mt-5 overflow-hidden text-[14px] md:text-[16px] text-muted-foreground duration-500 transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+      className="mx-5 -mt-5 mb-5 overflow-hidden text-[14px] text-muted-foreground transition-all duration-500 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down md:text-[16px]"
       {...props}
     >
       <div className={cn("pt-4", className)}>{children}</div>

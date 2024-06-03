@@ -5,12 +5,15 @@ import { Datalist, Input, Textarea } from "@/components/FormInputs";
 import { useFormAction } from "@/lib/hooks";
 import { useToast } from "@/components/ui/use-toast";
 
-
 export default function Contact() {
   const { toast } = useToast();
 
   const handleSubmit = async (formData) => {
-    function getData(...a){const o = {};a.map(i => o[i] = formData.get(i));return JSON.stringify(o);}
+    function getData(...a) {
+      const o = {};
+      a.map((i) => (o[i] = formData.get(i)));
+      return JSON.stringify(o);
+    }
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -39,24 +42,24 @@ export default function Contact() {
     <>
       <section
         id="how-to"
-        className="relative flex justify-center items-center pt-36"
+        className="relative flex items-center justify-center pt-36"
       >
-        <div className="h-full max-w-6xl w-full">
-          <div className="flex gap-10 mx-10 flex-col">
+        <div className="h-full w-full max-w-6xl">
+          <div className="mx-10 flex flex-col gap-10">
             <div>
               <div className="flex flex-col gap-6">
-                <h1 className="font-semibold text-[40px] md:text-[60px] text-center">
-                  <Send className="inline-flex size-[30px] md:size-[50px] mb-1 md:mb-2" />{" "}
+                <h1 className="text-center text-[40px] font-semibold md:text-[60px]">
+                  <Send className="mb-1 inline-flex size-[30px] md:mb-2 md:size-[50px]" />{" "}
                   Got Questions?
                 </h1>
-                <p className="font-medium text-[18px] md:text-[20px] text-foreground text-center">
+                <p className="text-center text-[18px] font-medium text-foreground md:text-[20px]">
                   Drop me a message and I&#39;ll try to reach you ASAP.
                 </p>
               </div>
             </div>
             <form
               ref={formRef}
-              className="grid gap-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
+              className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3"
             >
               <Input
                 icon={User}
@@ -105,7 +108,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={state.pending}
-                className="disabled:bg-primary py-4 px-9 md:col-span-2 xl:col-span-3 bg-primary hover:bg-primary transition-all duration-500 rounded-lg font-semibold text-primary-foreground"
+                className="rounded-lg bg-primary px-9 py-4 font-semibold text-primary-foreground transition-all duration-500 hover:bg-primary disabled:bg-primary md:col-span-2 xl:col-span-3"
               >
                 Submit
               </button>

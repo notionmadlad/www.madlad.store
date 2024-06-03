@@ -14,26 +14,26 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="border-b bg-background border-border h-20 fixed top-0 left-0 right-0 flex justify-center items-center z-[10]">
-        <div className="h-full max-w-6xl w-full">
-          <div className="h-full flex justify-between items-center mx-10">
-            <Link href="/" className="flex gap-5 items-center">
+      <nav className="fixed left-0 right-0 top-0 z-[10] flex h-20 items-center justify-center border-b border-border backdrop-blur">
+        <div className="h-full w-full max-w-6xl">
+          <div className="mx-10 flex h-full items-center justify-between">
+            <Link href="/" className="flex items-center gap-5">
               <Image
                 src="/madlad-logo.png"
                 alt="logo"
                 width={125}
                 height={25}
-                className="w-[50px] h-[50px] rounded-full border border-border"
+                className="h-[50px] w-[50px] rounded-full border border-border"
               />
-              <h1 className="font-semibold text-[20px]">The Madlad Store</h1>
+              <h1 className="text-[20px] font-semibold">The Madlad Store</h1>
             </Link>
-            <div className="flex gap-5 items-center">
-              <div className="hidden md:flex gap-5 items-center font-semibold *:text-[18px]">
+            <div className="flex items-center gap-5">
+              <div className="hidden items-center gap-5 font-semibold *:text-[18px] md:flex">
                 {Object.keys(navLinks).map((key, index) => (
                   <Link
                     href={navLinks[key]}
                     className={cn(
-                      "hover:border-b border-border",
+                      "border-border hover:border-b",
                       pathname === navLinks[key] && "border-b border-border",
                     )}
                     key={index}
@@ -45,7 +45,7 @@ export default function Navbar() {
               </div>
               <div
                 className={cn(
-                  "flex md:hidden flex-col gap-1.5 cursor-pointer transition-all duration-700 *:bg-foreground *:transition-all *:duration-700 *:rounded-full *:h-[2px]",
+                  "flex cursor-pointer flex-col gap-1.5 transition-all duration-700 *:h-[2px] *:rounded-full *:bg-foreground *:transition-all *:duration-700 md:hidden",
                   open && "rotate-[360deg]",
                 )}
                 onClick={() => setOpen((prev) => !prev)}
@@ -54,7 +54,7 @@ export default function Navbar() {
                 <div
                   className={cn(
                     "w-6",
-                    open && "translate-y-0 w-[2px] mx-[11px]",
+                    open && "mx-[11px] w-[2px] translate-y-0",
                   )}
                 />
                 <div
@@ -67,7 +67,7 @@ export default function Navbar() {
       </nav>
       <div
         className={cn(
-          "h-[225px] fixed flex md:hidden flex-col gap-3 -top-[145px] right-0 left-0 p-5 border-b border-border bg-background transition-all duration-500 ease-in-out font-semibold *:text-[18px] z-[5]",
+          "fixed -top-[145px] left-0 right-0 z-[5] flex h-[225px] flex-col gap-3 border-b border-border bg-background p-5 font-semibold transition-all duration-500 ease-in-out *:text-[18px] md:hidden",
           open && "top-20",
         )}
       >

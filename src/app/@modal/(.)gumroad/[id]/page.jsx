@@ -10,12 +10,12 @@ export default function ModalRoute({ params }) {
   const router = useRouter();
   return (
     <Modal>
-      <div className="py-20 px-30 gumroad-iframe relative">
+      <div className="px-30 gumroad-iframe relative py-20">
         <div
-          className="fixed top-3 right-7 p-2 bg-background border border-border rounded-lg cursor-pointer hover:bg-secondary"
+          className="fixed right-7 top-3 cursor-pointer rounded-lg border border-border bg-background p-2 hover:bg-secondary"
           onClick={router.back}
         >
-          <X className="w-8 h-8" />
+          <X className="h-8 w-8" />
         </div>
         <Script src="https://gumroad.com/js/gumroad-embed.js" />
         <div className="gumroad-product-embed">

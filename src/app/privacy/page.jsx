@@ -5,17 +5,17 @@ export default function Privacy() {
     <>
       <section
         id="how-to"
-        className="relative flex justify-center items-center pt-36"
+        className="relative flex items-center justify-center pt-36"
       >
-        <div className="h-full max-w-6xl w-full">
-          <div className="flex gap-10 mx-10 flex-col">
+        <div className="h-full w-full max-w-6xl">
+          <div className="mx-10 flex flex-col gap-10">
             <div>
               <div className="flex flex-col gap-6">
-                <h1 className="font-medium text-[35px] md:text-[42px] text-center">
+                <h1 className="text-center text-[35px] font-medium md:text-[42px]">
                   Privacy Policy
                 </h1>
                 <br />
-                <div className="flex flex-col gap-8 statements">
+                <div className="statements flex flex-col gap-8">
                   <p className="text-[16px] text-foreground">
                     Last Updated: 12th May, 2024
                   </p>

@@ -8,8 +8,9 @@
     @apply box-border scroll-smooth;
   }
 
-  html, body {
-    @apply w-full h-full bg-background text-foreground m-0 p-0;
+  html,
+  body {
+    @apply m-0 h-full w-full bg-background p-0 text-foreground;
   }
 
   body:has(.modal-backdrop) {
@@ -19,63 +20,63 @@
   body:has(.modal-backdrop) > nav > div {
     @apply pr-[15px];
   }
-  
+
   ::-webkit-scrollbar {
     @apply bg-[aliceblue];
   }
-  
+
   .transition-all {
     @apply ease-curve;
   }
-  
+
   .flip-y {
     transform: rotateY(180deg);
   }
 
   .statements ul {
-    @apply flex flex-col gap-5 text-[16px] text-foreground pl-5 list-decimal;
+    @apply flex list-decimal flex-col gap-5 pl-5 text-[16px] text-foreground;
   }
-  
+
   .statements li:not(:first-child) {
     @apply mt-5;
   }
-  
+
   .statements li :not(:first-child) {
     @apply mt-5;
   }
 
   .theme-transition {
-    @apply !transition-none !duration-300 *:!transition-none *:!duration-300 ;
+    @apply !transition-none !duration-300 *:!transition-none *:!duration-300;
   }
-  
+
   div:has(> .sj-powered-by) {
     @apply !hidden;
   }
-  
+
   .sj-card {
-    @apply !bg-card transition-all duration-300 shadow-none cursor-pointer hover:bg-secondary *:!text-foreground ease-curve;
+    @apply cursor-pointer !bg-card shadow-none transition-all duration-300 ease-curve *:!text-foreground hover:bg-secondary;
   }
-  
+
   .sj-text-card {
     @apply !bg-secondary;
   }
 
   .modal-backdrop {
-    @apply absolute top-0 left-0 bottom-0 right-0 bg-[#000000b3] flex justify-center items-center z-50;
+    @apply absolute bottom-0 left-0 right-0 top-0 z-50 flex items-center justify-center bg-[#000000b3];
   }
-  
+
   .gumroad-iframe > iframe {
-    @apply !bg-card rounded-lg max-w-[calc(1152px_-_5rem)] mx-auto;
+    @apply mx-auto max-w-[calc(1152px_-_5rem)] rounded-lg !bg-card;
   }
 
   .blue-gradient {
     @apply bg-[linear-gradient(180deg,_rgba(39,_0,_157,_0)_30%,_#005ea5_100%)] blur-[80px];
   }
-  
+
   .pink-gradient {
     @apply bg-[linear-gradient(90deg,_#ff7bfd_30%,_#ff18fb_100%)] blur-[160px];
   }
-  
+
   .white-gradient {
     @apply bg-[rgba(185,_185,_185,_0.6)] blur-[120px];
   }

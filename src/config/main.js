@@ -19,7 +19,7 @@ export const faqs = {
   q1: {
     title: (
       <span>
-        <AppWindow className="inline-flex size-[26px] mr-1" /> What is Notion?
+        <AppWindow className="mr-1 inline-flex size-[26px]" /> What is Notion?
       </span>
     ),
     content: (
@@ -33,7 +33,7 @@ export const faqs = {
   q2: {
     title: (
       <span>
-        <Banknote className="inline-flex size-[26px] mr-1" /> Will I need to pay
+        <Banknote className="mr-1 inline-flex size-[26px]" /> Will I need to pay
         for a Notion subscription?
       </span>
     ),
@@ -46,7 +46,7 @@ export const faqs = {
   q3: {
     title: (
       <span>
-        <Check className="inline-flex size-[26px] mr-1" /> How will I receive a
+        <Check className="mr-1 inline-flex size-[26px]" /> How will I receive a
         template?
       </span>
     ),
@@ -60,7 +60,7 @@ export const faqs = {
   q4: {
     title: (
       <span>
-        <UserRoundCheck className="inline-flex size-[26px] mr-1" /> How can I
+        <UserRoundCheck className="mr-1 inline-flex size-[26px]" /> How can I
         become an affiliate?
       </span>
     ),
@@ -79,7 +79,7 @@ export const faqs = {
   q5: {
     title: (
       <span>
-        <Mail className="inline-flex size-[26px] mr-1" /> Have more questions?
+        <Mail className="mr-1 inline-flex size-[26px]" /> Have more questions?
       </span>
     ),
     content: (
