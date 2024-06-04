@@ -103,6 +103,7 @@ export const products = {
     content: "Get started with Notion with ready-to-use free templates.",
     price: "FREE",
     image: "/products/basic-bundle.png",
+    banner: "/products/basic-bundle-banner.png",
     showcase: ["new", "popular", "bundles"],
     gumroad: "basic-bundle",
   },

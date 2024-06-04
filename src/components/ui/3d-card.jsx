@@ -11,7 +11,12 @@ import React, {
 
 const MouseEnterContext = createContext(undefined);
 
-export const CardContainer = ({ children, className, containerClassName }) => {
+export const CardContainer = ({
+  children,
+  className,
+  containerClassName,
+  divider,
+}) => {
   const containerRef = useRef(null);
   const [isMouseEntered, setIsMouseEntered] = useState(false);
 
@@ -19,8 +24,8 @@ export const CardContainer = ({ children, className, containerClassName }) => {
     if (!containerRef.current) return;
     const { left, top, width, height } =
       containerRef.current.getBoundingClientRect();
-    const x = (e.clientX - left - width / 2) / 15;
-    const y = (e.clientY - top - height / 2) / -15;
+    const x = (e.clientX - left - width / 2) / divider || 15;
+    const y = (e.clientY - top - height / 2) / -divider || -15;
     containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
   };
 

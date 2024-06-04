@@ -18,8 +18,11 @@ import { PinContainer } from "@/components/ui/3d-pin";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { Highlight } from "@/components/ui/hero-highlight";
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 
 export default function Home() {
+  const bundle = products.p1;
+
   return (
     <>
       <section
@@ -111,6 +114,50 @@ export default function Home() {
               </div>
               <BackgroundBeams />
             </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="bundle"
+        className="relative flex items-center justify-center pt-24"
+      >
+        <div className="h-full w-full max-w-6xl">
+          <div className="mx-10 flex flex-col gap-10">
+            <CardContainer divider={100}>
+              <CardBody className="flex w-full flex-1 cursor-pointer gap-10 rounded-lg border border-border bg-card p-10">
+                <CardItem
+                  translateZ={25}
+                  className="flex flex-[4] flex-col justify-between"
+                >
+                  <div className="flex flex-col gap-5">
+                    <p className="w-max border-b border-border font-mono text-muted-foreground">
+                      # Bestselling Template
+                    </p>
+                    <h1 className="text-[35px] font-semibold">
+                      {bundle.title}
+                    </h1>
+                    <p className="text-[18px] font-medium text-muted-foreground md:text-[20px]">
+                      {bundle.content}
+                    </p>
+                  </div>
+                  <Link
+                    href="/gumroad/basic-bundle"
+                    className="w-max rounded-lg bg-primary px-9 py-4 text-center font-semibold text-primary-foreground transition-all duration-500"
+                  >
+                    Get Full Bundle
+                  </Link>
+                </CardItem>
+                <CardItem translateZ={50} className="flex-[2]">
+                  <Image
+                    src={bundle.image}
+                    width={1080}
+                    height={1080}
+                    alt="Basic Madness Bundle"
+                    className="h-full w-full rounded-lg"
+                  />
+                </CardItem>
+              </CardBody>
+            </CardContainer>
           </div>
         </div>
       </section>
@@ -311,7 +358,7 @@ export default function Home() {
             <div className="mx-10 flex flex-wrap items-center justify-center gap-10 md:flex-row md:gap-[15%]">
               {Object.keys(stats).map((key, index) => (
                 <div className="flex flex-col items-center" key={index}>
-                  <div className="w-max text-[30px] font-semibold tabular-nums md:text-[35px]">
+                  <div className="w-max font-mono text-[30px] font-semibold tabular-nums md:text-[35px]">
                     <Lazy fallback="0+">
                       <Incrementor
                         number={stats[key]}

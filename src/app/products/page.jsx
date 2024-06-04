@@ -298,7 +298,7 @@ export default function Products() {
             <div className="mx-10 flex flex-wrap items-center justify-center gap-10 md:flex-row md:gap-[15%]">
               {Object.keys(stats).map((key, index) => (
                 <div className="flex flex-col items-center" key={index}>
-                  <div className="w-max text-[30px] font-semibold tabular-nums md:text-[35px]">
+                  <div className="w-max font-mono text-[30px] font-semibold tabular-nums md:text-[35px]">
                     <Lazy fallback="0+">
                       <Incrementor
                         number={stats[key]}

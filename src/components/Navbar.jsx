@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed left-0 right-[15px] top-0 z-[9999] flex h-20 items-center justify-center p-2">
+      <nav className="drop fixed left-0 right-[15px] z-[9999] flex h-20 items-center justify-center p-2">
         <div className="navbar h-full max-w-6xl overflow-hidden">
           <div className="mx-10 flex h-full items-center justify-between overflow-hidden rounded-full border border-border bg-background px-2 backdrop-blur-[6px]">
             <div className="flex items-center">
