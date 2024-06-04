@@ -78,7 +78,7 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       transitionTimingFunction: {
-        curve: " cubic-bezier(0, 0, 0, 1)",
+        curve: "cubic-bezier(0, 0, 0, 1)",
       },
       fontFamily: {
         mono: ["var(--font-mono)"],
