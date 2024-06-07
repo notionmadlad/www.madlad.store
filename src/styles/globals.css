@@ -24,17 +24,17 @@
 
   .drop {
     top: -80px;
-    animation: drop 1000ms cubic-bezier(0.5, 0, 1, 1) 1500ms forwards;
+    animation: drop 1000ms ease-in-out 1500ms forwards;
   }
 
   .navbar {
     width: 147px;
-    animation: navbar 1500ms cubic-bezier(0.5, 0, 1, 1) 2500ms forwards;
+    animation: navbar 1500ms ease-in-out 2500ms forwards;
   }
 
   .navbar .links-list {
     width: 0%;
-    animation: links-list 1000ms cubic-bezier(0.5, 0, 1, 1) 4000ms forwards;
+    animation: links-list 1000ms ease-in-out 4000ms forwards;
   }
 
   @keyframes drop {

@@ -56,7 +56,7 @@ export default function Home() {
                 >
                   <div className="mr-7 py-2">Get Full Bundle</div>
                   <div className="right-2 rounded-md border-border bg-red-600 px-3 py-2 font-mono transition-all duration-500 group-hover:bg-red-700 dark:bg-red-700 dark:group-hover:bg-red-800">
-                    FREE
+                    Free
                   </div>
                 </Link>
                 <Link
@@ -65,7 +65,7 @@ export default function Home() {
                 >
                   <div className="px-9 pb-2 pt-4">Get Full Bundle</div>
                   <div className="mx-2 mb-2 rounded-md border-border bg-red-600 py-2 font-mono transition-all duration-500 group-hover:bg-red-700 dark:bg-red-700 dark:group-hover:bg-red-800">
-                    FREE
+                    Free
                   </div>
                 </Link>
               </div>
@@ -123,11 +123,11 @@ export default function Home() {
       >
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-10">
-            <CardContainer divider={100}>
-              <CardBody className="flex w-full flex-1 cursor-pointer gap-10 rounded-lg border border-border bg-card p-10">
+            <CardContainer divider={50}>
+              <CardBody className="flex w-full flex-1 cursor-pointer rounded-lg border border-border bg-card group">
                 <CardItem
                   translateZ={25}
-                  className="flex flex-[4] flex-col justify-between"
+                  className="flex flex-[7] flex-col justify-between p-10"
                 >
                   <div className="flex flex-col gap-5">
                     <p className="w-max border-b border-border font-mono text-muted-foreground">
@@ -140,21 +140,31 @@ export default function Home() {
                       {bundle.content}
                     </p>
                   </div>
-                  <Link
-                    href="/gumroad/basic-bundle"
-                    className="w-max rounded-lg bg-primary px-9 py-4 text-center font-semibold text-primary-foreground transition-all duration-500"
-                  >
-                    Get Full Bundle
-                  </Link>
+                  <div className="flex gap-5">
+                    <Link
+                      href="/gumroad/basic-bundle"
+                      className="w-max rounded-lg bg-primary px-9 py-4 text-center font-semibold text-primary-foreground transition-all duration-500"
+                    >
+                      Get Full Bundle
+                    </Link>
+                    <div
+                      href="/gumroad/basic-bundle"
+                      className="w-max font-mono rounded-lg bg-red-600 dark:bg-red-700 px-4 py-4 text-center font-semibold text-foreground transition-all duration-500"
+                    >
+                      Free
+                    </div>
+                  </div>
                 </CardItem>
-                <CardItem translateZ={50} className="flex-[2]">
-                  <Image
-                    src={bundle.image}
-                    width={1080}
-                    height={1080}
-                    alt="Basic Madness Bundle"
-                    className="h-full w-full rounded-lg"
-                  />
+                <CardItem translateZ={50} className="flex-[4]">
+                  <div className="h-full w-full group-hover:p-5 transition-all duration-500">
+                    <Image
+                      src={bundle.image}
+                      width={1080}
+                      height={1080}
+                      alt="Basic Madness Bundle"
+                      className="rounded-r-lg group-hover:rounded-lg transition-all duration-500"
+                    />
+                  </div>
                 </CardItem>
               </CardBody>
             </CardContainer>
@@ -174,7 +184,7 @@ export default function Home() {
                   Most Popular
                 </h1>
                 <Link href="/products">
-                  <button className="group rounded-lg border border-border bg-card px-4 py-2 font-semibold transition-all duration-500 hover:bg-secondary">
+                  <button className="group font-mono rounded-lg border border-border bg-card px-4 py-2 font-semibold transition-all duration-500 hover:bg-secondary">
                     Explore
                   </button>
                 </Link>
@@ -208,7 +218,7 @@ export default function Home() {
                   Template Bundles
                 </h1>
                 <Link href="/products">
-                  <button className="group rounded-lg border border-border bg-card px-4 py-2 font-semibold transition-all duration-500 hover:bg-secondary">
+                  <button className="group font-mono rounded-lg border border-border bg-card px-4 py-2 font-semibold transition-all duration-500 hover:bg-secondary">
                     Explore
                   </button>
                 </Link>
@@ -357,7 +367,7 @@ export default function Home() {
             </div>
             <div className="mx-10 flex flex-wrap items-center justify-center gap-10 md:flex-row md:gap-[15%]">
               {Object.keys(stats).map((key, index) => (
-                <div className="flex flex-col items-center" key={index}>
+                <div className="flex flex-1 flex-col items-center" key={index}>
                   <div className="w-max font-mono text-[30px] font-semibold tabular-nums md:text-[35px]">
                     <Lazy fallback="0+">
                       <Incrementor

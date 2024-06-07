@@ -101,7 +101,7 @@ export const products = {
   p1: {
     title: "Basic Madness Bundle",
     content: "Get started with Notion with ready-to-use free templates.",
-    price: "FREE",
+    price: "Free",
     image: "/products/basic-bundle.png",
     banner: "/products/basic-bundle-banner.png",
     showcase: ["new", "popular", "bundles"],
@@ -110,7 +110,7 @@ export const products = {
   p2: {
     title: "ECommerce Madness",
     content: "Organize and manage your ECommerce business.",
-    price: "FREE",
+    price: "Free",
     image: "/products/ecommerce.png",
     showcase: ["new", "popular"],
     gumroad: "ecommerce",
@@ -118,7 +118,7 @@ export const products = {
   p3: {
     title: "Project Madness",
     content: "Organize, manage and take control of all your projects.",
-    price: "FREE",
+    price: "Free",
     image: "/products/project.png",
     showcase: ["new"],
     gumroad: "project",
@@ -126,7 +126,7 @@ export const products = {
   p4: {
     title: "Social Media Madness",
     content: "Create and organize all your Social Media accounts and posts.",
-    price: "FREE",
+    price: "Free",
     image: "/products/social-media.png",
     showcase: ["new"],
     gumroad: "social-media",
@@ -134,7 +134,7 @@ export const products = {
   p5: {
     title: "Solopreneur Madness",
     content: "Organize and manage your Solopreneur business.",
-    price: "FREE",
+    price: "Free",
     image: "/products/solopreneur.png",
     showcase: ["new"],
     gumroad: "solopreneur",

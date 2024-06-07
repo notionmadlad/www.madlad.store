@@ -16,7 +16,7 @@ export default function Navbar() {
     <>
       <nav className="drop fixed left-0 right-[15px] z-[9999] flex h-20 items-center justify-center p-2">
         <div className="navbar h-full max-w-6xl overflow-hidden">
-          <div className="mx-10 flex h-full items-center justify-between overflow-hidden rounded-full border border-border bg-background px-2 backdrop-blur-[6px]">
+          <div className="mx-10 flex h-full items-center justify-between overflow-hidden rounded-full border border-border bg-card px-2 backdrop-blur-[6px]">
             <div className="flex items-center">
               <Link href="/" className="flex items-center gap-5">
                 <Image
@@ -85,7 +85,7 @@ export default function Navbar() {
       </nav>
       <div
         className={cn(
-          "fixed -top-[145px] left-12 right-[63px] z-[999] flex h-[225px] flex-col gap-3 rounded-lg border border-border bg-background p-5 font-semibold opacity-0 transition-all duration-500 ease-in-out *:text-[18px] md:hidden",
+          "fixed -top-[145px] left-12 right-[63px] z-[999] flex h-[225px] flex-col gap-3 rounded-lg border border-border bg-card p-5 font-semibold opacity-0 transition-all duration-500 ease-in-out *:text-[18px] md:hidden",
           open && "top-20 opacity-100",
         )}
       >

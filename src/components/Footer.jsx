@@ -67,7 +67,7 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className="mx-10 mt-5 border-t border-border pb-12 pt-5 text-[18px] font-semibold">
+          <div className="mx-10 mt-5 font-mono border-t border-border pb-12 pt-5 text-[18px] font-semibold">
             ©️ Coding Madlad 2023 - {new Date().getFullYear()}. All right
             reserved.
           </div>

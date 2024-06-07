@@ -70,7 +70,7 @@ export function useThemeSwitcher() {
     }
   }, [theme]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const updateTheme = () => {
       const newTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
