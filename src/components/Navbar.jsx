@@ -7,10 +7,11 @@ import { useState } from "react";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { navLinks } from "@/config/main";
 import { usePathname } from "next/navigation";
+import { hydrate, useHydrate } from "@/lib/hooks";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname() || "/";
+  const pathname = useHydrate(usePathname, { defaultState: "/" }, [hydrate("base")]);
 
   return (
     <>

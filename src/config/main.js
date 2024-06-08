@@ -112,7 +112,7 @@ export const products = {
     content: "Organize and manage your ECommerce business.",
     price: "Free",
     image: "/products/ecommerce.png",
-    showcase: ["new", "popular"],
+    showcase: ["popular"],
     gumroad: "ecommerce",
   },
   p3: {

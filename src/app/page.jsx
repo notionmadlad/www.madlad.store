@@ -183,7 +183,7 @@ export default function Home() {
                   <BadgeCheck className="mb-1 inline-flex size-[30px] md:mb-2 md:size-[32px]" />{" "}
                   Most Popular
                 </h1>
-                <Link href="/products">
+                <Link href="/products?search=popular">
                   <button className="group font-mono rounded-lg border border-border bg-card px-4 py-2 font-semibold transition-all duration-500 hover:bg-secondary">
                     Explore
                   </button>
@@ -217,7 +217,7 @@ export default function Home() {
                   <Boxes className="mb-1 inline-flex size-[30px] md:mb-2 md:size-[32px]" />{" "}
                   Template Bundles
                 </h1>
-                <Link href="/products">
+                <Link href="/products?search=bundles">
                   <button className="group font-mono rounded-lg border border-border bg-card px-4 py-2 font-semibold transition-all duration-500 hover:bg-secondary">
                     Explore
                   </button>

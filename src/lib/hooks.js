@@ -3,10 +3,34 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
+export const hydrate = (key) => `hydrate-dependency-at-${key}`;
+
+export function useHydrate(useFn, { defaultState, defaultValue }, rawDeps = []) {
+  const [value, setValue] = useState(defaultState || null);
+  const fn = useFn(defaultValue);
+
+  const deps = rawDeps.map(dep => {
+    switch (dep) {
+      case hydrate("base"):
+        return fn;
+      case hydrate("state"):
+        return value;    
+      default:
+        return dep;
+    }
+  });
+
+  useEffect(() => {
+    setValue(fn);
+  }, deps);
+
+  return value || defaultState;
+}
+
 export function useSearchFilter(obj) {
-  const searchParams = useSearchParams();
+  const searchParams = useHydrate(useSearchParams, {}, [hydrate("base")]);
   const router = useRouter();
-  const [query, setQuery] = useState(searchParams.get("search"));
+  const [query, setQuery] = useState(searchParams?.get("search"));
   const [filtered, setFiltered] = useState(obj);
 
   useEffect(() => {

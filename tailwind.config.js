@@ -82,7 +82,7 @@ module.exports = {
       },
       fontFamily: {
         mono: ["var(--font-mono)"],
-        poppins: ["var(--font-poppins)"],
+        sans: ["var(--font-sans)"],
       },
     },
   },

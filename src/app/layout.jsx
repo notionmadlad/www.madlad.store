@@ -1,23 +1,20 @@
-import { JetBrains_Mono, Poppins } from "next/font/google";
+import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toast/toaster";
 import { Analytics } from "@vercel/analytics/react";
+import { cn } from "@/lib/utils";
 
 import "@/styles/globals.css";
 import "@/styles/theme.css";
-import { cn } from "@/lib/utils";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["500", "600"],
-  variable: "--font-poppins",
+const sans = localFont({
+  src: "../fonts/GeistSansVF.woff",
+  variable: "--font-sans"
 });
-
-const mono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["500", "600"],
-  variable: "--font-mono",
+const mono = localFont({
+  src: "../fonts/GeistMonoVF.woff",
+  variable: "--font-mono"
 });
 
 /** @type {import('next').Metadata} */
@@ -40,27 +37,37 @@ export const metadata = {
     description:
       "Discover the best Notion Templates to help you stay organized and productive.",
     url: "https://www.madlad.store",
-    images: "/images/madlad-logo.png",
+    images: "/madlad-logo.png",
     locale: "en-US",
   },
   twitter: {
     title: "The Madlad Store",
     description:
       "Discover the best Notion Templates to help you stay organized and productive.",
-    images: "/images/madlad-logo.png",
+    images: "/madlad-logo.png",
   },
 };
 
+function rootElements(...args) {
+  const Root = () => <>{args.map(arg => arg)}</>;
+  return Root;
+}
+
 export default function RootLayout({ children, modal }) {
+  const Root = rootElements(
+    <Navbar />,
+      children,
+      modal,
+    <Footer />,
+      <Toaster />,
+      <Analytics />
+  );
+  const fontVariables = cn(sans.variable, mono.variable);
+
   return (
     <html lang="en">
-      <body className={cn(poppins.variable, mono.variable)}>
-        <Navbar />
-        {children}
-        {modal}
-        <Footer />
-        <Toaster />
-        <Analytics />
+      <body className={fontVariables}>
+        <Root />
       </body>
     </html>
   );
