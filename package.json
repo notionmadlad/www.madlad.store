@@ -1,8 +1,19 @@
 {
   "name": "www.madlad.store",
-  "version": "prod-1.0.0",
+  "description": "The Madlad Store",
+  "version": "2.0.0",
+  "author": {
+    "url": "https://www.madlad.store",
+    "name": "Coding Madlad",
+    "email": "martin.nicolai.online@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/notionmadlad/www.madlad.store",
+    "type": "public"
+  },
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -25,6 +36,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "resend": "^3.2.0",
+    "sharp": "^0.33.4",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7"
   },
