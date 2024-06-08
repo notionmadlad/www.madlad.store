@@ -28,7 +28,7 @@ export function useHydrate(useFn, { defaultState, defaultValue }, rawDeps = []) 
 }
 
 export function useSearchFilter(obj) {
-  const searchParams = useHydrate(useSearchParams, {}, [hydrate("base")]);
+  const searchParams = useSearchParams();
   const router = useRouter();
   const [query, setQuery] = useState(searchParams?.get("search"));
   const [filtered, setFiltered] = useState(obj);
