@@ -24,7 +24,7 @@ export default function ThemeSwitcher({ mobile }) {
   return !mobile ? (
     <div
       onClick={toggleTheme}
-      className="cursor-pointer rounded-full border border-border bg-card hover:bg-secondary transition-all duration-300 p-3"
+      className="cursor-pointer rounded-full border border-border bg-card p-3 transition-all duration-300 hover:bg-secondary"
     >
       <Icon />
     </div>

@@ -25,7 +25,7 @@ function ProductCard({ product }) {
               className="flex flex-col justify-between gap-2 font-semibold"
             >
               <p className="text-[20px]">{product.title}</p>
-              <p className="w-max rounded-md bg-secondary px-2.5 py-1 font-mono text-[16px]">
+              <p className="w-max rounded-md bg-secondary px-2.5 py-1 text-[16px]">
                 {product.price}
               </p>
             </CardItem>

@@ -11,7 +11,9 @@ import { hydrate, useHydrate } from "@/lib/hooks";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const pathname = useHydrate(usePathname, { defaultState: "/" }, [hydrate("base")]);
+  const pathname = useHydrate(usePathname, { defaultState: "/" }, [
+    hydrate("base"),
+  ]);
 
   return (
     <>

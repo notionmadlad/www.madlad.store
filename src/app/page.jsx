@@ -55,7 +55,7 @@ export default function Home() {
                   className="group hidden justify-center rounded-lg border border-border bg-card py-2 pl-9 pr-2 text-center font-semibold transition-all duration-500 hover:bg-secondary md:flex"
                 >
                   <div className="mr-7 py-2">Get Full Bundle</div>
-                  <div className="right-2 rounded-md border-border bg-red-600 px-3 py-2 font-mono transition-all duration-500 group-hover:bg-red-700 dark:bg-red-700 dark:group-hover:bg-red-800">
+                  <div className="right-2 rounded-md border-border bg-red-600 px-3 py-2 transition-all duration-500 group-hover:bg-red-700 dark:bg-red-700 dark:group-hover:bg-red-800">
                     Free
                   </div>
                 </Link>
@@ -64,7 +64,7 @@ export default function Home() {
                   className="group rounded-lg border border-border bg-card text-center font-semibold transition-all duration-500 hover:bg-secondary md:hidden"
                 >
                   <div className="px-9 pb-2 pt-4">Get Full Bundle</div>
-                  <div className="mx-2 mb-2 rounded-md border-border bg-red-600 py-2 font-mono transition-all duration-500 group-hover:bg-red-700 dark:bg-red-700 dark:group-hover:bg-red-800">
+                  <div className="mx-2 mb-2 rounded-md border-border bg-red-600 py-2 transition-all duration-500 group-hover:bg-red-700 dark:bg-red-700 dark:group-hover:bg-red-800">
                     Free
                   </div>
                 </Link>
@@ -124,13 +124,13 @@ export default function Home() {
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-10">
             <CardContainer divider={50}>
-              <CardBody className="flex w-full flex-1 cursor-pointer rounded-lg border border-border bg-card group">
+              <CardBody className="group flex w-full flex-1 cursor-pointer rounded-lg border border-border bg-card">
                 <CardItem
                   translateZ={25}
                   className="flex flex-[7] flex-col justify-between p-10"
                 >
                   <div className="flex flex-col gap-5">
-                    <p className="w-max border-b border-border font-mono text-muted-foreground">
+                    <p className="w-max border-b border-border text-muted-foreground">
                       # Bestselling Template
                     </p>
                     <h1 className="text-[35px] font-semibold">
@@ -149,20 +149,20 @@ export default function Home() {
                     </Link>
                     <div
                       href="/gumroad/basic-bundle"
-                      className="w-max font-mono rounded-lg bg-red-600 dark:bg-red-700 px-4 py-4 text-center font-semibold text-foreground transition-all duration-500"
+                      className="w-max rounded-lg bg-red-600 px-4 py-4 text-center font-semibold text-foreground transition-all duration-500 dark:bg-red-700"
                     >
                       Free
                     </div>
                   </div>
                 </CardItem>
                 <CardItem translateZ={50} className="flex-[4]">
-                  <div className="h-full w-full group-hover:p-5 transition-all duration-500">
+                  <div className="h-full w-full transition-all duration-500 group-hover:p-5">
                     <Image
                       src={bundle.image}
                       width={1080}
                       height={1080}
                       alt="Basic Madness Bundle"
-                      className="rounded-r-lg group-hover:rounded-lg transition-all duration-500"
+                      className="rounded-r-lg transition-all duration-500 group-hover:rounded-lg"
                     />
                   </div>
                 </CardItem>
@@ -184,7 +184,7 @@ export default function Home() {
                   Most Popular
                 </h1>
                 <Link href="/products?search=popular">
-                  <button className="group font-mono rounded-lg border border-border bg-card px-4 py-2 font-semibold transition-all duration-500 hover:bg-secondary">
+                  <button className="group rounded-lg border border-border bg-card px-4 py-2 font-semibold transition-all duration-500 hover:bg-secondary">
                     Explore
                   </button>
                 </Link>
@@ -218,7 +218,7 @@ export default function Home() {
                   Template Bundles
                 </h1>
                 <Link href="/products?search=bundles">
-                  <button className="group font-mono rounded-lg border border-border bg-card px-4 py-2 font-semibold transition-all duration-500 hover:bg-secondary">
+                  <button className="group rounded-lg border border-border bg-card px-4 py-2 font-semibold transition-all duration-500 hover:bg-secondary">
                     Explore
                   </button>
                 </Link>
@@ -270,7 +270,7 @@ export default function Home() {
                 transition={{ type: "linear", duration: 0.7, delay: 0 }}
                 className="group mb-7 flex flex-col items-center gap-5 xl:mb-0"
               >
-                <div className="w-max cursor-pointer font-mono text-[150px] font-semibold text-muted-foreground transition-all duration-500 group-hover:-translate-y-4">
+                <div className="w-max cursor-pointer text-[150px] font-semibold text-muted-foreground transition-all duration-500 group-hover:-translate-y-4">
                   1
                 </div>
                 <h3 className="text-[18px] font-semibold md:text-[20px]">
@@ -302,7 +302,7 @@ export default function Home() {
                 transition={{ type: "linear", duration: 0.7, delay: 0.2 }}
                 className="group mb-7 flex flex-col items-center gap-5 xl:mb-0"
               >
-                <div className="w-max cursor-pointer font-mono text-[150px] font-semibold text-muted-foreground transition-all duration-500 group-hover:-translate-y-4">
+                <div className="w-max cursor-pointer text-[150px] font-semibold text-muted-foreground transition-all duration-500 group-hover:-translate-y-4">
                   2
                 </div>
                 <h3 className="text-[18px] font-semibold md:text-[20px]">
@@ -335,7 +335,7 @@ export default function Home() {
                 transition={{ type: "linear", duration: 0.7, delay: 0.4 }}
                 className="group mb-7 flex flex-col items-center gap-5 xl:mb-0"
               >
-                <div className="w-max cursor-pointer font-mono text-[150px] font-semibold text-muted-foreground transition-all duration-500 group-hover:-translate-y-4">
+                <div className="w-max cursor-pointer text-[150px] font-semibold text-muted-foreground transition-all duration-500 group-hover:-translate-y-4">
                   3
                 </div>
                 <h3 className="text-[18px] font-semibold md:text-[20px]">
@@ -368,7 +368,7 @@ export default function Home() {
             <div className="mx-10 flex flex-wrap items-center justify-center gap-10 md:flex-row md:gap-[15%]">
               {Object.keys(stats).map((key, index) => (
                 <div className="flex flex-1 flex-col items-center" key={index}>
-                  <div className="w-max font-mono text-[30px] font-semibold tabular-nums md:text-[35px]">
+                  <div className="w-max text-[30px] font-semibold tabular-nums md:text-[35px]">
                     <Lazy fallback="0+">
                       <Incrementor
                         number={stats[key]}

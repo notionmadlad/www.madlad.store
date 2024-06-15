@@ -177,7 +177,7 @@ export default function Products() {
                 transition={{ type: "linear", duration: 0.7, delay: 0 }}
                 className="group mb-7 flex flex-col items-center gap-5 xl:mb-0"
               >
-                <div className="w-max cursor-pointer font-mono text-[150px] font-semibold text-muted-foreground transition-all duration-500 group-hover:-translate-y-4">
+                <div className="w-max cursor-pointer text-[150px] font-semibold text-muted-foreground transition-all duration-500 group-hover:-translate-y-4">
                   1
                 </div>
                 <h3 className="text-[18px] font-semibold md:text-[20px]">
@@ -209,7 +209,7 @@ export default function Products() {
                 transition={{ type: "linear", duration: 0.7, delay: 0.2 }}
                 className="group mb-7 flex flex-col items-center gap-5 xl:mb-0"
               >
-                <div className="w-max cursor-pointer font-mono text-[150px] font-semibold text-muted-foreground transition-all duration-500 group-hover:-translate-y-4">
+                <div className="w-max cursor-pointer text-[150px] font-semibold text-muted-foreground transition-all duration-500 group-hover:-translate-y-4">
                   2
                 </div>
                 <h3 className="text-[18px] font-semibold md:text-[20px]">
@@ -242,7 +242,7 @@ export default function Products() {
                 transition={{ type: "linear", duration: 0.7, delay: 0.4 }}
                 className="group mb-7 flex flex-col items-center gap-5 xl:mb-0"
               >
-                <div className="w-max cursor-pointer font-mono text-[150px] font-semibold text-muted-foreground transition-all duration-500 group-hover:-translate-y-4">
+                <div className="w-max cursor-pointer text-[150px] font-semibold text-muted-foreground transition-all duration-500 group-hover:-translate-y-4">
                   3
                 </div>
                 <h3 className="text-[18px] font-semibold md:text-[20px]">
@@ -298,7 +298,7 @@ export default function Products() {
             <div className="mx-10 flex flex-wrap items-center justify-center gap-10 md:flex-row md:gap-[15%]">
               {Object.keys(stats).map((key, index) => (
                 <div className="flex flex-1 flex-col items-center" key={index}>
-                  <div className="w-max font-mono text-[30px] font-semibold tabular-nums md:text-[35px]">
+                  <div className="w-max text-[30px] font-semibold tabular-nums md:text-[35px]">
                     <Lazy fallback="0+">
                       <Incrementor
                         number={stats[key]}

@@ -81,7 +81,6 @@ module.exports = {
         curve: "cubic-bezier(0, 0, 0, 1)",
       },
       fontFamily: {
-        mono: ["var(--font-mono)"],
         sans: ["var(--font-sans)"],
       },
     },

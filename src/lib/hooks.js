@@ -3,18 +3,22 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
-export const hydrate = (key) => `hydrate-dependency-at-${key}`;
+export const hydrate = (key) => `HYDRATE (dependency) AT (${key})`;
 
-export function useHydrate(useFn, { defaultState, defaultValue }, rawDeps = []) {
+export function useHydrate(
+  useFn,
+  { defaultState, defaultValue },
+  rawDeps = [],
+) {
   const [value, setValue] = useState(defaultState || null);
   const fn = useFn(defaultValue);
 
-  const deps = rawDeps.map(dep => {
+  const deps = rawDeps.map((dep) => {
     switch (dep) {
       case hydrate("base"):
         return fn;
       case hydrate("state"):
-        return value;    
+        return value;
       default:
         return dep;
     }
