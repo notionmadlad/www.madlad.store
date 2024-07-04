@@ -9,7 +9,7 @@ const Newsletter = dynamic(() => import("./Newsletter"), { ssr: false });
 export default function Footer() {
   return (
     <>
-      <div className="relative flex items-center justify-center pt-24">
+      <div className="z-10 relative flex items-center justify-center pt-24">
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-10">
             <div>
@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <footer className="relative flex items-center justify-center pt-24">
+      <footer className="z-10 relative flex items-center justify-center pt-24">
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col flex-wrap justify-between gap-10 md:flex-row">
             <div className="max-w-lg flex-1">

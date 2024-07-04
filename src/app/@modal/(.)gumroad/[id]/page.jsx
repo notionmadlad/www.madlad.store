@@ -19,7 +19,7 @@ export default function ModalParallel({ params }) {
         </div>
         <Script src="https://gumroad.com/js/gumroad-embed.js" />
         <div className="gumroad-product-embed">
-          <Link href={`https://notionmadlad.gumroad.com/l/${params.id}`} />
+          <Link href={`https://codingmadlad.gumroad.com/l/${params.id}`} />
         </div>
       </div>
     </Modal>

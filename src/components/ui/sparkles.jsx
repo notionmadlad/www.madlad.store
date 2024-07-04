@@ -72,11 +72,11 @@ export const SparklesCore = (props) => {
               },
               modes: {
                 push: {
-                  quantity: 4,
+                  quantity: 10,
                 },
                 repulse: {
                   distance: 200,
-                  duration: 0.4,
+                  duration: 2,
                 },
               },
             },

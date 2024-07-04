@@ -29,13 +29,13 @@ export default function Products() {
     <>
       <section
         id="home"
-        className="relative flex items-center justify-center pt-36"
+        className="z-10 relative flex items-center justify-center pt-36"
       >
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-y-10 lg:flex-row">
             <div className="flex-[3]">
               <div className="flex flex-col gap-6">
-                <h1 className="text-[40px] font-semibold md:text-[60px]">
+                <h1 className="text-[38px] font-semibold md:text-[58px]">
                   <Copy className="mb-1 inline-flex size-[30px] md:mb-2 md:size-[50px]" />{" "}
                   Notion{" "}
                   <span className="text-text-muted-foreground">Templates</span>
@@ -61,7 +61,7 @@ export default function Products() {
       </section>
       <section
         id="new"
-        className="relative flex items-center justify-center pt-24"
+        className="z-10 relative flex items-center justify-center pt-24"
       >
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-10">
@@ -90,7 +90,7 @@ export default function Products() {
       </section>
       <section
         id="popular"
-        className="relative flex items-center justify-center pt-24"
+        className="z-10 relative flex items-center justify-center pt-24"
       >
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-10">
@@ -119,7 +119,7 @@ export default function Products() {
       </section>
       <section
         id="bundles"
-        className="relative flex items-center justify-center pt-24"
+        className="z-10 relative flex items-center justify-center pt-24"
       >
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-10">
@@ -148,7 +148,7 @@ export default function Products() {
       </section>
       <section
         id="how-to"
-        className="relative flex items-center justify-center pt-24"
+        className="z-10 relative flex items-center justify-center pt-24"
       >
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-10">
@@ -258,7 +258,7 @@ export default function Products() {
       </section>
       <section
         id="all"
-        className="relative flex items-center justify-center pt-24"
+        className="z-10 relative flex items-center justify-center pt-24"
       >
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-10">
@@ -284,7 +284,7 @@ export default function Products() {
       </section>
       <section
         id="reviews"
-        className="relative flex items-center justify-center pt-24"
+        className="z-10 relative flex items-center justify-center pt-24"
       >
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-10">
@@ -324,7 +324,7 @@ export default function Products() {
       </section>
       <section
         id="faqs"
-        className="relative flex items-center justify-center pt-24"
+        className="z-10 relative flex items-center justify-center pt-24"
       >
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-10">

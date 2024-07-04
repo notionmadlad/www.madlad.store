@@ -41,14 +41,14 @@ export default function Contact() {
   return (
     <>
       <section
-        id="how-to"
-        className="relative flex items-center justify-center pt-36"
+        id="contact"
+        className="z-10 relative flex items-center justify-center pt-36"
       >
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-10">
             <div>
               <div className="flex flex-col gap-6">
-                <h1 className="text-center text-[40px] font-semibold md:text-[60px]">
+                <h1 className="text-center text-[38px] font-semibold md:text-[58px]">
                   <Send className="mb-1 inline-flex size-[30px] md:mb-2 md:size-[50px]" />{" "}
                   Got Questions?
                 </h1>

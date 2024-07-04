@@ -15,10 +15,7 @@ import ProductCard from "@/components/ProductCard";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { PinContainer } from "@/components/ui/3d-pin";
-import { BackgroundBeams } from "@/components/ui/background-beams";
-import { SparklesCore } from "@/components/ui/sparkles";
 import { Highlight } from "@/components/ui/hero-highlight";
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 
 export default function Home() {
   const bundle = products.p1;
@@ -27,20 +24,20 @@ export default function Home() {
     <>
       <section
         id="home"
-        className="relative flex items-center justify-center pt-36"
+        className="z-10 relative flex items-center justify-center pt-36"
       >
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-y-10 lg:flex-row">
-            <div className="z-[1] flex-[3]">
+            <div className="flex-[3]">
               <div className="flex flex-col gap-6">
-                <h1 className="text-[40px] font-semibold md:text-[60px]">
+                <h1 className="text-[38px] font-semibold md:text-[58px]">
                   <Laptop className="mb-1 inline-flex size-[30px] md:mb-2 md:size-[50px]" />{" "}
                   Boost Your <Highlight>Productivity</Highlight> with The Notion
                   Madness
                 </h1>
                 <p className="text-[18px] font-medium text-muted-foreground md:text-[20px]">
                   Discover the best Notion Templates to help you stay organized
-                  and productive.
+                  and productive. <span className="dark:hidden">(Use darkmode for a better experience)</span>
                 </p>
               </div>
               <div className="mt-10 flex flex-col gap-6 md:flex-row">
@@ -98,84 +95,15 @@ export default function Home() {
                   />
                 </PinContainer>
               </motion.div>
-              {/* <div className="absolute w-[40%] h-[35%] top-50 pink-gradient dark:opacity-[0.1] opacity-[0.4]" />
-              <div className="absolute w-[80%] h-[80%] rounded-full white-gradient top-40 dark:opacity-[0.1] opacity-[0.3]" />
-              <div className="absolute w-[50%] h-[50%] right-20 bottom-20 blue-gradient dark:opacity-[0.1] opacity-[0.2]" /> */}
-              <div className="absolute left-0 right-0 top-0 h-screen">
-                <SparklesCore
-                  id="tsparticlesfullpage"
-                  background="transparent"
-                  minSize={0.3}
-                  maxSize={1}
-                  particleDensity={60}
-                  className="h-full w-full"
-                  particleColor="#777777"
-                />
-              </div>
-              <BackgroundBeams />
             </div>
           </div>
         </div>
       </section>
       <section
-        id="bundle"
-        className="relative flex items-center justify-center pt-24"
+        id="popular"
+        className="z-10 relative flex items-center justify-center pt-24"
       >
         <div className="h-full w-full max-w-6xl">
-          <div className="mx-10 flex flex-col gap-10">
-            <CardContainer divider={50}>
-              <CardBody className="group flex w-full flex-1 cursor-pointer rounded-lg border border-border bg-card">
-                <CardItem
-                  translateZ={25}
-                  className="flex flex-[7] flex-col justify-between p-10"
-                >
-                  <div className="flex flex-col gap-5">
-                    <p className="w-max border-b border-border text-muted-foreground">
-                      # Bestselling Template
-                    </p>
-                    <h1 className="text-[35px] font-semibold">
-                      {bundle.title}
-                    </h1>
-                    <p className="text-[18px] font-medium text-muted-foreground md:text-[20px]">
-                      {bundle.content}
-                    </p>
-                  </div>
-                  <div className="flex gap-5">
-                    <Link
-                      href="/gumroad/basic-bundle"
-                      className="w-max rounded-lg bg-primary px-9 py-4 text-center font-semibold text-primary-foreground transition-all duration-500"
-                    >
-                      Get Full Bundle
-                    </Link>
-                    <div
-                      href="/gumroad/basic-bundle"
-                      className="w-max rounded-lg bg-red-600 px-4 py-4 text-center font-semibold text-foreground transition-all duration-500 dark:bg-red-700"
-                    >
-                      Free
-                    </div>
-                  </div>
-                </CardItem>
-                <CardItem translateZ={50} className="flex-[4]">
-                  <div className="h-full w-full transition-all duration-500 group-hover:p-5">
-                    <Image
-                      src={bundle.image}
-                      width={1080}
-                      height={1080}
-                      alt="Basic Madness Bundle"
-                      className="rounded-r-lg transition-all duration-500 group-hover:rounded-lg"
-                    />
-                  </div>
-                </CardItem>
-              </CardBody>
-            </CardContainer>
-          </div>
-        </div>
-      </section>
-      <section
-        id="popular"
-        className="relative flex items-center justify-center pt-24"
-      >
-        <div className="z-[5] h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-10">
             <div className="flex-1">
               <div className="flex flex-row items-center justify-between gap-6">
@@ -207,9 +135,9 @@ export default function Home() {
       </section>
       <section
         id="bundles"
-        className="relative flex items-center justify-center pt-24"
+        className="z-10 relative flex items-center justify-center pt-24"
       >
-        <div className="z-[5] h-full w-full max-w-6xl">
+        <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-10">
             <div className="flex-1">
               <div className="flex flex-row items-center justify-between gap-6">
@@ -241,7 +169,7 @@ export default function Home() {
       </section>
       <section
         id="how-to"
-        className="relative flex items-center justify-center pt-24"
+        className="z-10 relative flex items-center justify-center pt-24"
       >
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-10">
@@ -351,7 +279,7 @@ export default function Home() {
       </section>
       <section
         id="reviews"
-        className="relative flex items-center justify-center pt-24"
+        className="z-10 relative flex items-center justify-center pt-24"
       >
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-10">
@@ -394,7 +322,7 @@ export default function Home() {
       </section>
       <section
         id="faqs"
-        className="relative flex items-center justify-center pt-24"
+        className="z-10 relative flex items-center justify-center pt-24"
       >
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-10">
@@ -422,13 +350,13 @@ export default function Home() {
       </section>
       <section
         id="cta"
-        className="relative flex items-center justify-center pt-24"
+        className="z-10 relative flex items-center justify-center pt-24"
       >
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-10">
             <div className="flex-1">
               <div className="flex flex-col gap-6">
-                <h1 className="text-center text-[40px] font-semibold md:text-[60px]">
+                <h1 className="text-center text-[38px] font-semibold md:text-[58px]">
                   Boost your{" "}
                   <span className="text-muted-foreground">productivity</span>{" "}
                   and organization

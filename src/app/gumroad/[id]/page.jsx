@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Gumroad({ params }) {
   return (
     <>
-      <section className="relative flex items-center justify-center pt-36">
+      <section className="z-10 relative flex items-center justify-center pt-36">
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10">
             <Script src="https://gumroad.com/js/gumroad-embed.js" />

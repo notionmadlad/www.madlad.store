@@ -88,7 +88,7 @@ export default function Navbar() {
       </nav>
       <div
         className={cn(
-          "fixed -top-[145px] left-12 right-[63px] z-[999] flex h-[225px] flex-col gap-3 rounded-lg border border-border bg-card p-5 font-semibold opacity-0 transition-all duration-500 ease-in-out *:text-[18px] md:hidden",
+          "fixed -top-[145px] left-12 right-[63px] z-[9998] flex h-[225px] flex-col gap-3 rounded-lg border border-border bg-card p-5 font-semibold opacity-0 transition-all duration-500 ease-in-out *:text-[18px] md:hidden",
           open && "top-20 opacity-100",
         )}
       >

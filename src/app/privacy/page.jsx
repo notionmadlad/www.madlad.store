@@ -4,8 +4,8 @@ export default function Privacy() {
   return (
     <>
       <section
-        id="how-to"
-        className="relative flex items-center justify-center pt-36"
+        id="privacy"
+        className="z-10 relative flex items-center justify-center pt-36"
       >
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-10">
