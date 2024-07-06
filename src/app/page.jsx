@@ -1,5 +1,3 @@
-"use client";
-
 import Incrementor from "@/components/Incrementor";
 import Lazy from "@/components/Lazy";
 import Image from "next/image";
@@ -10,15 +8,20 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { BadgeCheck, Boxes, Laptop, ChevronsRight } from "lucide-react";
-import { faqs, products, stats } from "@/config/main";
+import { faqs, stats } from "@/config/main";
 import ProductCard from "@/components/ProductCard";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { PinContainer } from "@/components/ui/3d-pin";
 import { Highlight } from "@/components/ui/hero-highlight";
+import { cache } from "@/lib/cache";
+import { formatDatabase, queryDatabase } from "@/lib/notion";
+import { MotionDiv } from "@/components/Motion";
+import { Suspense } from "react";
 
-export default function Home() {
-  const bundle = products.p1;
+const getProducts = cache(() => queryDatabase().then(formatDatabase), ["/", "getProducts"], { revalidate: 60 * 60 });
+
+export default async function Home() {
+  const database = await getProducts();
 
   return (
     <>
@@ -68,7 +71,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-[2] items-center justify-center lg:justify-end">
-              <motion.div
+              <MotionDiv
                 initial="hidden"
                 whileInView="enter"
                 exit="exit"
@@ -94,7 +97,7 @@ export default function Home() {
                     className="flip-y"
                   />
                 </PinContainer>
-              </motion.div>
+              </MotionDiv>
             </div>
           </div>
         </div>
@@ -119,14 +122,12 @@ export default function Home() {
               </div>
             </div>
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3">
-              {Object.keys(products).map(
-                (key, index) =>
-                  products[key].showcase.includes("popular") && (
-                    <ProductCard
-                      delay={index * 0.2}
-                      product={products[key]}
-                      key={index}
-                    />
+              {database.map(
+                (item) =>
+                  item.Tags.find(tag => tag.name === "Popular") && (
+                    <Suspense key={item.Id}>
+                      <ProductCard product={item}/>
+                    </Suspense>
                   ),
               )}
             </div>
@@ -153,14 +154,12 @@ export default function Home() {
               </div>
             </div>
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3">
-              {Object.keys(products).map(
-                (key, index) =>
-                  products[key].showcase.includes("bundles") && (
-                    <ProductCard
-                      delay={index * 0.2}
-                      product={products[key]}
-                      key={index}
-                    />
+              {database.map(
+                (item) =>
+                  item.Tags.find(tag => tag.name === "Bundle") && (
+                    <Suspense key={item.Id}>
+                      <ProductCard product={item}/>
+                    </Suspense>
                   ),
               )}
             </div>
@@ -185,7 +184,7 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-10 flex flex-col items-center justify-between xl:mb-5 xl:flex-row">
-              <motion.div
+              <MotionDiv
                 initial="hidden"
                 whileInView="enter"
                 exit="exit"
@@ -207,7 +206,7 @@ export default function Home() {
                 <h3 className="max-w-[280px] text-center text-[14px] text-muted-foreground md:text-[16px]">
                   Browse for a template that fits your needs.
                 </h3>
-              </motion.div>
+              </MotionDiv>
               <div>
                 <ChevronsRight
                   className="h-20 w-20 rotate-90 xl:rotate-0"
@@ -217,7 +216,7 @@ export default function Home() {
                   alt="arrow"
                 />
               </div>
-              <motion.div
+              <MotionDiv
                 initial="hidden"
                 whileInView="enter"
                 exit="exit"
@@ -240,7 +239,7 @@ export default function Home() {
                   Put your email to receive a receipt and complete your
                   purchase.
                 </h3>
-              </motion.div>
+              </MotionDiv>
               <div>
                 <ChevronsRight
                   className="h-20 w-20 rotate-90 xl:rotate-0"
@@ -250,7 +249,7 @@ export default function Home() {
                   alt="arrow"
                 />
               </div>
-              <motion.div
+              <MotionDiv
                 initial="hidden"
                 whileInView="enter"
                 exit="exit"
@@ -272,7 +271,7 @@ export default function Home() {
                 <h3 className="max-w-[280px] text-center text-[14px] text-muted-foreground md:text-[16px]">
                   Open the link and duplicate it to your Notion account.
                 </h3>
-              </motion.div>
+              </MotionDiv>
             </div>
           </div>
         </div>

@@ -1,5 +1,3 @@
-"use client";
-
 import Incrementor from "@/components/Incrementor";
 import Lazy from "@/components/Lazy";
 import {
@@ -17,13 +15,18 @@ import {
   Search,
   Sparkles,
 } from "lucide-react";
-import { faqs, products, stats } from "@/config/main";
+import { faqs, stats } from "@/config/main";
 import ProductCard from "@/components/ProductCard";
-import { useSearchFilter } from "@/lib/hooks";
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/components/Motion";
+import { cache } from "@/lib/cache";
+import { formatDatabase, queryDatabase } from "@/lib/notion";
+import Searchbar from "@/components/Search";
+import { Suspense } from "react";
 
-export default function Products() {
-  const [provider, filtered] = useSearchFilter(products);
+const getProducts = cache(() => queryDatabase().then(formatDatabase), ["/products", "getProducts"], { revalidate: 60 * 60 });
+
+export default async function Products() {
+  const database = await getProducts();
 
   return (
     <>
@@ -46,14 +49,9 @@ export default function Products() {
                 </p>
               </div>
               <div className="mt-10 flex flex-col gap-6 md:flex-row">
-                <label className="group relative flex w-full overflow-hidden rounded-lg border border-border md:max-w-lg">
-                  <Search className="absolute left-0 h-14 w-11 overflow-hidden py-2 pl-5 transition-all duration-500 group-focus-within:-left-11 group-focus-within:h-14" />
-                  <input
-                    className="w-full bg-input py-4 pl-16 pr-9 outline-none transition-all duration-500 placeholder:text-foreground group-focus-within:pl-9"
-                    placeholder="Search for templates..."
-                    {...provider}
-                  />
-                </label>
+                <Suspense>
+                  <Searchbar />
+                </Suspense>
               </div>
             </div>
           </div>
@@ -74,14 +72,12 @@ export default function Products() {
               </div>
             </div>
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3">
-              {Object.keys(filtered).map(
-                (key, index) =>
-                  products[key].showcase.includes("new") && (
-                    <ProductCard
-                      delay={index * 0.2}
-                      product={products[key]}
-                      key={index}
-                    />
+              {database.map(
+                (item) =>
+                  item.Tags.find(tag => tag.name === "New") && (
+                    <Suspense key={item.Id}>
+                      <ProductCard product={item}/>
+                    </Suspense>
                   ),
               )}
             </div>
@@ -103,14 +99,12 @@ export default function Products() {
               </div>
             </div>
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3">
-              {Object.keys(filtered).map(
-                (key, index) =>
-                  products[key].showcase.includes("popular") && (
-                    <ProductCard
-                      delay={index * 0.2}
-                      product={products[key]}
-                      key={index}
-                    />
+              {database.map(
+                (item) =>
+                  item.Tags.find(tag => tag.name === "Popular") && (
+                    <Suspense key={item.Id}>
+                      <ProductCard product={item}/>
+                    </Suspense>
                   ),
               )}
             </div>
@@ -132,14 +126,12 @@ export default function Products() {
               </div>
             </div>
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3">
-              {Object.keys(filtered).map(
-                (key, index) =>
-                  products[key].showcase.includes("bundles") && (
-                    <ProductCard
-                      delay={index * 0.2}
-                      product={products[key]}
-                      key={index}
-                    />
+              {database.map(
+                (item) =>
+                  item.Tags.find(tag => tag.name === "Bundle") && (
+                    <Suspense key={item.Id}>
+                      <ProductCard product={item}/>
+                    </Suspense>
                   ),
               )}
             </div>
@@ -164,7 +156,7 @@ export default function Products() {
               </div>
             </div>
             <div className="mx-10 flex flex-col items-center justify-between xl:mb-5 xl:flex-row">
-              <motion.div
+              <MotionDiv
                 initial="hidden"
                 whileInView="enter"
                 exit="exit"
@@ -186,7 +178,7 @@ export default function Products() {
                 <h3 className="max-w-[280px] text-center text-[14px] text-muted-foreground md:text-[16px]">
                   Browse for a template that fits your needs.
                 </h3>
-              </motion.div>
+              </MotionDiv>
               <div>
                 <ChevronsRight
                   className="h-20 w-20 rotate-90 xl:rotate-0"
@@ -196,7 +188,7 @@ export default function Products() {
                   alt="arrow"
                 />
               </div>
-              <motion.div
+              <MotionDiv
                 initial="hidden"
                 whileInView="enter"
                 exit="exit"
@@ -219,7 +211,7 @@ export default function Products() {
                   Put your email to receive a receipt and complete your
                   purchase.
                 </h3>
-              </motion.div>
+              </MotionDiv>
               <div>
                 <ChevronsRight
                   className="h-20 w-20 rotate-90 xl:rotate-0"
@@ -229,7 +221,7 @@ export default function Products() {
                   alt="arrow"
                 />
               </div>
-              <motion.div
+              <MotionDiv
                 initial="hidden"
                 whileInView="enter"
                 exit="exit"
@@ -251,7 +243,7 @@ export default function Products() {
                 <h3 className="max-w-[280px] text-center text-[14px] text-muted-foreground md:text-[16px]">
                   Open the link and duplicate it to your Notion account.
                 </h3>
-              </motion.div>
+              </MotionDiv>
             </div>
           </div>
         </div>
@@ -271,13 +263,13 @@ export default function Products() {
               </div>
             </div>
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3">
-              {Object.keys(filtered).map((key, index) => (
-                <ProductCard
-                  delay={index * 0.2}
-                  product={products[key]}
-                  key={index}
-                />
-              ))}
+              {database.map(
+                (item) => (
+                  <Suspense key={item.Id}>
+                    <ProductCard product={item}/>
+                  </Suspense>
+                )
+              )}
             </div>
           </div>
         </div>

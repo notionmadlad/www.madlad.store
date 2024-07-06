@@ -3,11 +3,9 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
-export const hydrate = (key) => `HYDRATE (dependency) AT (${key})`;
-
 export function useHydrate(
   useFn,
-  { defaultState, defaultValue },
+  [defaultState, defaultValue],
   rawDeps = [],
 ) {
   const [value, setValue] = useState(defaultState || null);
@@ -15,9 +13,9 @@ export function useHydrate(
 
   const deps = rawDeps.map((dep) => {
     switch (dep) {
-      case hydrate("base"):
+      case "$base":
         return fn;
-      case hydrate("state"):
+      case "$state":
         return value;
       default:
         return dep;
@@ -26,52 +24,34 @@ export function useHydrate(
 
   useEffect(() => {
     setValue(fn);
-  }, deps);
+  }, [...deps]);
 
   return value || defaultState;
 }
 
-export function useSearchFilter(obj) {
+export function useSearchFilter() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [query, setQuery] = useState(searchParams?.get("search"));
-  const [filtered, setFiltered] = useState(obj);
 
   useEffect(() => {
     const url = new URL(window.location.href);
 
     if (query) {
       url.searchParams.set("search", query);
-
-      setFiltered((prev) => {
-        const newObj = {};
-        const keys = Object.keys(prev);
-        keys.forEach((key) => {
-          const item = obj[key];
-
-          if (
-            JSON.stringify(item).toLowerCase().includes(query.toLowerCase())
-          ) {
-            newObj[key] = item;
-          }
-        });
-
-        return newObj;
-      });
     } else {
       url.searchParams.delete("search");
-      setFiltered(obj);
     }
 
     router.push(url.href.replace(window.location.origin, ""));
-  }, [obj, query, router, searchParams]);
+  }, [query, router, searchParams]);
 
   const provider = {
     value: query,
     onChange: (e) => setQuery(e.target.value),
   };
 
-  return [provider, filtered];
+  return provider;
 }
 
 export function useThemeSwitcher() {

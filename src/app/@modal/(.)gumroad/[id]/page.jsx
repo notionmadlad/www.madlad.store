@@ -8,6 +8,7 @@ import Link from "next/link";
 
 export default function ModalParallel({ params }) {
   const router = useRouter();
+  
   return (
     <Modal>
       <div className="px-30 gumroad-iframe relative py-20">

@@ -1,18 +1,24 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
+import { useSearchParams } from "next/navigation";
 
 function ProductCard({ product }) {
-  return (
+  const searchParams = useSearchParams();
+  const productValue = JSON.stringify(Object.values(product)).toLowerCase();
+
+  return (productValue.includes(searchParams.get("search"))) && (
     <CardContainer>
       <CardBody className="group/card overflow- group flex cursor-pointer flex-col rounded-lg border border-border bg-card">
-        <Link href={`/gumroad/${product.gumroad}`}>
+        <Link href={`/gumroad/${product.Slug[0].plain_text}`}>
           <CardItem
             translateZ={50}
             className="flex w-full justify-center transition-all duration-500 group-hover:bg-transparent group-hover:p-5"
           >
             <Image
-              src={product.image}
+              src={product.Image[0].file.url}
               width={264}
               height={264}
               alt="logo"
@@ -24,12 +30,12 @@ function ProductCard({ product }) {
               translateZ={25}
               className="flex flex-col justify-between gap-2 font-semibold"
             >
-              <p className="text-[20px]">{product.title}</p>
+              <p className="text-[20px]">{product.Name[0].plain_text}</p>
               <p className="w-max rounded-md bg-secondary px-2.5 py-1 text-[16px]">
-                {product.price}
+                {product.Price === 0 ? "Free" : `$${product.Price}`}
               </p>
             </CardItem>
-            <p className="text-muted-foreground">{product.content}</p>
+            <p className="text-muted-foreground">{product.Content[0].plain_text}</p>
           </CardItem>
         </Link>
       </CardBody>
