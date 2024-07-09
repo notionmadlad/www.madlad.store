@@ -18,7 +18,7 @@ import { formatDatabase, queryDatabase } from "@/lib/notion";
 import { MotionDiv } from "@/components/Motion";
 import { Suspense } from "react";
 
-const getProducts = cache(() => queryDatabase().then(formatDatabase), ["/", "getProducts"], { revalidate: 60 * 60 });
+const getProducts = () => queryDatabase().then(formatDatabase);
 
 export default async function Home() {
   const database = await getProducts();

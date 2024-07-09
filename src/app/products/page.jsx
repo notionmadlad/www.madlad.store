@@ -23,7 +23,7 @@ import { formatDatabase, queryDatabase } from "@/lib/notion";
 import Searchbar from "@/components/Search";
 import { Suspense } from "react";
 
-const getProducts = cache(() => queryDatabase().then(formatDatabase), ["/products", "getProducts"], { revalidate: 60 * 60 });
+const getProducts = () => queryDatabase().then(formatDatabase);
 
 export default async function Products() {
   const database = await getProducts();
