@@ -17,7 +17,7 @@ export default function Navbar() {
     <>
       <nav className="drop fixed left-0 right-[15px] z-[9999] flex h-20 items-center justify-center p-2">
         <div className="navbar h-full max-w-6xl overflow-hidden">
-          <div className="mx-10 flex h-full items-center justify-between overflow-hidden rounded-full border border-border bg-card px-2 backdrop-blur-[6px]">
+          <div className="mx-10 flex h-full items-center justify-between overflow-hidden rounded-lg border border-border bg-card px-2 backdrop-blur-[6px]">
             <div className="flex items-center">
               <Link href="/" className="flex items-center gap-5">
                 <Image
@@ -25,7 +25,7 @@ export default function Navbar() {
                   alt="logo"
                   width={50}
                   height={50}
-                  className="rounded-full border border-border"
+                  className="rounded-md border border-border"
                 />
                 <h1 className="text-nowrap text-[20px] font-semibold">
                   The Madlad Store
