@@ -13,12 +13,9 @@ import ProductCard from "@/components/ProductCard";
 import Link from "next/link";
 import { PinContainer } from "@/components/ui/3d-pin";
 import { Highlight } from "@/components/ui/hero-highlight";
-import { cache } from "@/lib/cache";
-import { formatDatabase, queryDatabase } from "@/lib/notion";
+import { getProducts } from "@/lib/cache";
 import { MotionDiv } from "@/components/Motion";
 import { Suspense } from "react";
-
-const getProducts = () => queryDatabase().then(formatDatabase);
 
 export default async function Home() {
   const database = await getProducts();

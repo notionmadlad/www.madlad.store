@@ -18,12 +18,9 @@ import {
 import { faqs, stats } from "@/config/main";
 import ProductCard from "@/components/ProductCard";
 import { MotionDiv } from "@/components/Motion";
-import { cache } from "@/lib/cache";
-import { formatDatabase, queryDatabase } from "@/lib/notion";
 import Searchbar from "@/components/Search";
 import { Suspense } from "react";
-
-const getProducts = () => queryDatabase().then(formatDatabase);
+import { getProducts } from "@/lib/cache";
 
 export default async function Products() {
   const database = await getProducts();
