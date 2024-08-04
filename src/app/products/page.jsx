@@ -22,6 +22,8 @@ import Searchbar from "@/components/Search";
 import { Suspense } from "react";
 import { getProducts } from "@/lib/cache";
 
+export const dynamic = "force-dynamic";
+
 export default async function Products() {
   const database = await getProducts();
 

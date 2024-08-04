@@ -13,7 +13,7 @@ export default function ModalParallel({ params }) {
     <Modal>
       <div className="px-30 gumroad-iframe relative py-20">
         <div
-          className="fixed right-7 top-3 cursor-pointer rounded-lg border border-border bg-background p-2 hover:bg-secondary"
+          className="fixed z-[1000000] right-7 top-3 cursor-pointer rounded-lg border border-border bg-background p-2 hover:bg-secondary"
           onClick={router.back}
         >
           <X className="h-8 w-8" />

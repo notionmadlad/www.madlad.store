@@ -17,6 +17,8 @@ import { getProducts } from "@/lib/cache";
 import { MotionDiv } from "@/components/Motion";
 import { Suspense } from "react";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const database = await getProducts();
 

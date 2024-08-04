@@ -3,13 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { UserRoundPlus } from "lucide-react";
 import dynamic from "next/dynamic";
+import NotFound from "./NotFound";
 
 const Newsletter = dynamic(() => import("./Newsletter"), { ssr: false });
 
 export default function Footer() {
   return (
     <>
-      <div className="z-10 relative flex items-center justify-center pt-24">
+      <section 
+          id="newsletter"
+        	className="z-10 relative flex items-center justify-center pt-24"
+        >
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col gap-10">
             <div>
@@ -27,7 +31,7 @@ export default function Footer() {
             <Newsletter />
           </div>
         </div>
-      </div>
+      </section>
       <footer className="z-10 relative flex items-center justify-center pt-24">
         <div className="h-full w-full max-w-6xl">
           <div className="mx-10 flex flex-col flex-wrap justify-between gap-10 md:flex-row">
@@ -73,6 +77,7 @@ export default function Footer() {
           </div>
         </div>
       </footer>
+      <NotFound />
     </>
   );
 }

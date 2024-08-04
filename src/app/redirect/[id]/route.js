@@ -9,6 +9,5 @@ export async function GET(request, context) {
   const url = key.startsWith("$")
     ? request.nextUrl.origin + redirects[key]
     : redirects[key];
-  console.log();
   return NextResponse.redirect(url);
 }

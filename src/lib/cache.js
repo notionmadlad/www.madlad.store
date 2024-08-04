@@ -6,4 +6,4 @@ export function cache(cb, keyParts, options = {},) {
   return nextCache(reactCache(cb), keyParts, options);
 }
 
-export const getProducts = cache(() => queryDatabase().then(formatDatabase), ["getProducts"], { revalidate: 60 * 60 });
+export const getProducts = cache(() => queryDatabase().then(formatDatabase), ["getProducts"], { revalidate: 3600 });

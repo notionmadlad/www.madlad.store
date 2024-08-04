@@ -73,7 +73,7 @@
   }
 
   body:has(.modal-backdrop) {
-    @apply overflow-hidden !pr-[15px];
+    @apply overflow-hidden;
   }
 
   body:has(.modal-backdrop) > nav > div {

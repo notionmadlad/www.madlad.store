@@ -31,7 +31,6 @@ export default function Contact() {
       toast({
         description: "Oops! Something went wrong!",
       });
-      console.log(error);
       return error;
     }
   };
